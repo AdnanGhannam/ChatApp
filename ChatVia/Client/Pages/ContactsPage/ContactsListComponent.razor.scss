@@ -1,0 +1,23 @@
+﻿@import "../../Shared/Styles/Mixins.scss";
+
+.contacts-list {
+    margin-bottom: 2em !important;
+     
+    &__item {
+        @include flex(flex-start);
+        margin: 0 1ch;
+        font-weight: 500;
+        font-family: var(--ff-primary);
+        color: var(--clr-primary-800);
+
+        &:first-child {
+            margin: 0;
+            color: var(--clr-primary);
+        }
+
+        .name {
+            flex: 1;
+            cursor: pointer
+        }
+    }
+}

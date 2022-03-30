@@ -1,0 +1,19 @@
+﻿.user-info-item {
+    padding: 1em;
+    font-size: 1rem;
+    font-weight: 400;
+
+    &__title {
+        color: var(--clr-primary-400);
+    }
+
+    &__content {
+        margin: 0;
+        font-weight: 600;
+        font-size: .95em;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,69 @@
+﻿@import "../Styles/Mixins.scss";
+
+$padding: 1.5em;
+
+.top {
+    @include flex(center, center, column);
+    padding-bottom: $padding;
+    border-bottom: 1px solid var(--clr-primary-300);
+    
+    .img-box {
+        $size: 6rem;
+        width: $size;
+        height: $size;
+        margin: 1em .5em;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        box-shadow: var(--clr-primary-300) 0px 0px 1px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    }
+
+    .edit-icon {
+        @include absolute(100%, 100%, auto, auto, -125%, -125%);
+        $s: 2.2em;
+        width: $s;
+        height: $s;
+        line-height: 1.9em;
+        text-align: center;
+        border-radius: 50%;
+        background-color: var(--clr-primary-300);
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .online-box {
+        @include flex(space-between);
+        color: var(--clr-primary-400);
+
+        .circle {
+            $size: 6px;
+            width: $size;
+            height: $size;
+            display: inline-block;
+            border-radius: 50%;
+            margin-right: .5em;
+            background-color: var(--clr-online);
+
+            &--offline {
+                background-color: var(--clr-offline);
+            }
+        }
+
+        .text {
+            font-size: .9em;
+        }
+    }
+}
+
+
+
+.middel {
+    padding: 0 $padding;
+    color: var(--clr-primary-400);
+}
+
+.bottom {
+    padding: 0 $padding;
+}

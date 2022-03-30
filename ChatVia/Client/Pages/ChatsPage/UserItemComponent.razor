@@ -1,0 +1,59 @@
+﻿<li class="user-item @(IsSmall ? "small" : "big") @(IsActive ? "active" : "")" @onclick="OnClick">
+    @if(Color is not null)
+    {
+        <MudBadge Color="@(Color ?? MudBlazor.Color.Success)" Origin="Origin.BottomRight" Class="user-item__top"
+                    Bordered Overlap Dot >
+            <MudAvatar Image="@ImageUrl" Class="user-img" Alt="@FirstName[0].ToString()" />
+        </MudBadge>
+    }
+    else
+    {
+        <MudAvatar Image="@ImageUrl" Class="user-item__top" />
+    }
+    <div class="user-item__center">
+        <h6 class="full-name">
+            <span class="first-name">@FirstName</span>
+            <span class="last-name">@LastName</span>
+        </h6>
+        <p class="message">@LastMessage</p>
+    </div>
+    <div class="user-item__bottom">
+        <div class="time">@Time</div>
+        @if(NumberOfMessages is not null)
+        {
+            <MudBadge Content="@NumberOfMessages" Overlap Class="messages-num" />
+        }
+    </div>
+</li>
+
+@code {
+    [Parameter]
+    public bool IsSmall { get; set; } = false;
+
+    [Parameter]
+    public bool IsActive { get; set; } = false;
+
+    [Parameter]
+    public string FirstName { get; set; }
+
+    [Parameter]
+    public string LastName { get; set; }
+
+    [Parameter]
+    public string LastMessage { get; set; }
+
+    [Parameter]
+    public Color? Color { get; set; }
+
+    [Parameter]
+    public string Time { get; set; }
+
+    [Parameter]
+    public string? ImageUrl { get; set; }
+
+    [Parameter]
+    public int? NumberOfMessages { get; set; }
+
+    [Parameter]
+    public EventCallback OnClick { get; set; }
+}

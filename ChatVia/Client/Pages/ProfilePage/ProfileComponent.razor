@@ -1,0 +1,75 @@
+﻿@page "/profile"
+@using ChatVia.Client.Enums
+@using ChatVia.Client.Services
+@using ChatVia.Client.Shared.UserPanel;
+@using ChatVia.Client.Shared.UserInfoItem;
+@using ChatVia.Shared.Helpers
+@using ChatVia.Shared.ResponseDtos
+@inject IFetchService _fetch
+
+<PageTitle>Profile</PageTitle>
+@*
+TODO
+add a loading
+*@
+
+<UserPanelComponent Title="My Profile" Username="@response.Data?.UserName" IsOnline 
+                    ImageUrl="@response.Data?.ProfilePhoto"
+                    Bio="@response.Data?.Bio">
+        <HeaderButton>
+            <MudMenu Icon="@Icons.Material.Filled.MoreVert"
+                        AnchorOrigin="Origin.BottomLeft" TransformOrigin="Origin.TopRight">
+                <MudMenuItem Link="/settings">Edit</MudMenuItem>
+            </MudMenu>
+        </HeaderButton>
+        <ChildContent>
+            <MudExpansionPanels DisableBorders="true" Elevation="0">
+                <MudExpansionPanel Class="mt-2">
+                    <TitleContent>
+                        <div class="d-flex">
+                            <MudIcon Icon="@Icons.Filled.Person" class="mr-3"></MudIcon>
+                            <MudText>About</MudText>
+                        </div>
+                    </TitleContent>
+                    <ChildContent>
+                        <ul>
+                            <UserInfoItemComponent Title="Name">
+                                @response.Data?.UserName
+                            </UserInfoItemComponent>
+                            <UserInfoItemComponent Title="Status">
+                                @response.Data?.Status
+                            </UserInfoItemComponent>
+                            <UserInfoItemComponent Title="Location">
+                                @response.Data?.Location
+                            </UserInfoItemComponent>
+                        </ul>
+                    </ChildContent>
+                </MudExpansionPanel>
+                <MudExpansionPanel Class="mt-2" Disabled>
+                    <TitleContent>
+                        <div class="d-flex">
+                            <MudIcon Icon="@Icons.Filled.AttachFile" class="mr-3"></MudIcon>
+                            <MudText>Attached files</MudText>
+                        </div>
+                    </TitleContent>
+                    <ChildContent>
+                        Panel Content
+                    </ChildContent>
+                </MudExpansionPanel>
+            </MudExpansionPanels>
+        </ChildContent>
+</UserPanelComponent>
+
+@code {
+    private ResponseModel<AppUserByIdDto> response = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        await _fetch.GetAsync<ResponseModel<AppUserByIdDto>>(
+            "api/users",
+            includeCredentials: true,
+            callback: r => response = r);
+    }
+}

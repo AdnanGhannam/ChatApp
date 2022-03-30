@@ -1,0 +1,56 @@
+﻿@using Blazored.LocalStorage
+@using Blazored.SessionStorage
+@using ChatVia.Client.Services
+@using ChatVia.Client.Shared.UserPanel;
+@using ChatVia.Shared.Helpers
+@using ChatVia.Shared.ResponseDtos
+@inject IDialogService DialogService
+@inject IFetchService _fetch
+@inject NavigationManager NavigationManager
+@inject ILocalStorageService localStorage
+@inject ISessionStorageService sessionStorage
+
+@if(response.Data is not null)
+{
+    <section class="chat-panel">
+        <div class="chat-panel__top">
+            <div class="chat-panel__top__user-box">
+                <MudIconButton Icon="@Icons.Filled.ArrowBackIosNew" 
+                                Size="Size.Small" Class="chat-panel__top__back-btn"
+                                OnClick="@(() => { MainLayout.ArticleBodyIsActive = false; MainLayout.Rerender();})"/>
+                <MudAvatar Image="@response.Data.Member?.ProfilePhoto" />
+                <button class="user-name" @onclick="OpenDialog">@response.Data.Member?.UserName</button>
+                <span class='circle @(true ? "circle--online" : "circle--offline")'></span>
+            </div>
+            <div class="chat-panel__top__ctrl-box">
+                <MudIconButton Icon="@Icons.Filled.Search" />
+                <MudIconButton Icon="@Icons.Filled.Person" @onclick="OpenDialog"/>
+
+                <MudMenu Icon="@Icons.Material.Filled.MoreVert"
+                            AnchorOrigin="Origin.BottomLeft" TransformOrigin="Origin.TopRight">
+                    <MudMenuItem OnClick="OnMuteButtonClick">@(response.Data.IsMuted ? "Unmute this chat" : "Mute this chat")</MudMenuItem>
+                </MudMenu>
+            </div>
+        </div>
+
+        <div class="chat-panel__center">
+            @foreach(var message in SortByDate(response.Data.Messages))
+            {
+                <MessageComponent ImageUrl="https://www.diethelmtravel.com/wp-content/uploads/2016/04/bill-gates-wealthiest-person-279x300.jpg" 
+                                    SenderName="@message.Sender?.UserName" Time="@message.CreationTime.ToShortTimeString()"
+                                    Position="@(response.Data.Member?.Id != message.SenderId ? "right" : "")">
+                        @message.Content
+                </MessageComponent>
+            }
+        </div>
+
+        <form class="chat-panel__bottom" >
+            <MudTextField @bind-Value="@MessageValue" Immediate="true" Variant="Variant.Outlined" 
+                          Placeholder="Enter a message..." class="custom-input chat-panel__bottom__input" />
+
+            <MudIconButton Icon="@Icons.Filled.Send" Variant="Variant.Filled" 
+                            Color="Color.Primary" OnClick="Send"
+                            ButtonType="ButtonType.Button"/>
+        </form>
+    </section>
+}

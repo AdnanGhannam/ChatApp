@@ -1,0 +1,45 @@
+﻿@page "/groups"
+@using ChatVia.Client.Shared.SidePanel;
+@using ChatVia.Client.Shared.ChatViaInput;
+@inject IDialogService DialogService
+
+@*
+TODO
+Add a create group button
+*@
+
+<PageTitle>Groups</PageTitle>
+
+<SidePanelComponent Title="Groups">
+    <HeaderButton>
+        <MudIconButton Icon="@Icons.Filled.GroupAdd" @onclick="OpenDialog"/>
+    </HeaderButton>
+    <ChildContentHeader>
+        <MudTextField @bind-Value="@searchTerm" AdornmentIcon="@Icons.Filled.Search"
+                      Adornment="Adornment.Start" Immediate="true" Variant="Variant.Outlined" 
+                      Placeholder="Search groups..." class="custom-input"/>
+    </ChildContentHeader>
+    <ChildContent>
+        @foreach (var sentence in sentences)
+        {
+            <GroupsItemComponent SearchTerm="@searchTerm" Name="@sentence" Number="23"/>
+        }
+    </ChildContent>
+</SidePanelComponent>
+
+@code {
+    string searchTerm = "";
+    IEnumerable<string> sentences = new List<string>
+    {
+        "General", "Reporting", "Designers",
+        "General", "Reporting", "Designers",
+    };
+
+    private void OpenDialog()
+    {    
+        DialogOptions dialogOptions = new DialogOptions() 
+                        { MaxWidth = MaxWidth.Small, FullWidth = true, CloseOnEscapeKey = true, CloseButton = true, };
+
+        DialogService.Show<AddGroupComponent>("Create New Group", dialogOptions);
+    }
+}

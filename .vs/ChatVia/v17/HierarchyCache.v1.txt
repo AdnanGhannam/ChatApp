@@ -1,0 +1,378 @@
+﻿++Solution 'ChatVia' ‎(5 of 5 projects)
+i:{00000000-0000-0000-0000-000000000000}:ChatVia.sln
+++ChatVia.Server
+i:{00000000-0000-0000-0000-000000000000}:ChatVia.Server
+++Connected Services 
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:>2816
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:>2817
+++Dependencies
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:>2814
+i:{3ceaee9a-2ab3-499a-90e6-9b8f739d1f16}:>1467
+i:{45823810-0524-4665-b818-6c510bc97de2}:>1570
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:>1667
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:>2815
+++Properties
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\users\asus\source\repos\chatvia\chatvia\server\properties\
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\users\asus\source\repos\chatvia\chatvia.domain\entities\properties\
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\properties\
+++Controllers
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\users\asus\source\repos\chatvia\chatvia\server\controllers\
+++Pages
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\users\asus\source\repos\chatvia\chatvia\server\pages\
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\
+++appsettings.json
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\users\asus\source\repos\chatvia\chatvia\server\appsettings.json
+++Program.cs
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\users\asus\source\repos\chatvia\chatvia\server\program.cs
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\program.cs
+++No service dependencies discovered
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:>2818
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:>2819
+++Analyzers
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:analyzers
+i:{3ceaee9a-2ab3-499a-90e6-9b8f739d1f16}:analyzers
+i:{45823810-0524-4665-b818-6c510bc97de2}:analyzers
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:analyzers
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:analyzers
+++Frameworks
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:frameworks
+i:{3ceaee9a-2ab3-499a-90e6-9b8f739d1f16}:frameworks
+i:{45823810-0524-4665-b818-6c510bc97de2}:frameworks
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:frameworks
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:frameworks
+++Packages
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:packages
+i:{45823810-0524-4665-b818-6c510bc97de2}:packages
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:packages
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:packages
+++Projects
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:projects
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:projects
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:projects
+++launchSettings.json
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\users\asus\source\repos\chatvia\chatvia\server\properties\launchsettings.json
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\properties\launchsettings.json
+++WeatherForecastController.cs
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\users\asus\source\repos\chatvia\chatvia\server\controllers\weatherforecastcontroller.cs
+++Error.cshtml
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\users\asus\source\repos\chatvia\chatvia\server\pages\error.cshtml
+++appsettings.Development.json
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\users\asus\source\repos\chatvia\chatvia\server\appsettings.development.json
+++Microsoft.AspNetCore.Analyzers
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.App.Analyzers
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.2\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+++Microsoft.AspNetCore.App.CodeFixes
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.2\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\.nuget\packages\microsoft.aspnetcore.components.analyzers\6.0.2\analyzers\dotnet\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.AspNetCore.Razor.SourceGenerator.Tooling.Internal
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.sourcegenerator.tooling.internal.dll
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.sourcegenerator.tooling.internal.dll
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{3ceaee9a-2ab3-499a-90e6-9b8f739d1f16}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{3ceaee9a-2ab3-499a-90e6-9b8f739d1f16}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.EntityFrameworkCore.Analyzers
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\users\asus\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.2\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\users\asus\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.2\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:c:\users\asus\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.2\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+++Microsoft.Extensions.Logging.Generators
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.2\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\users\asus\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:c:\users\asus\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++Microsoft.NET.Sdk.Razor.SourceGenerators
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+++System.Text.Json.SourceGeneration
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.2\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{3ceaee9a-2ab3-499a-90e6-9b8f739d1f16}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.2\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.2\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.2\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.2\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+++Microsoft.AspNetCore.App
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\users\asus\source\repos\chatvia\chatvia\server\microsoft.aspnetcore.app
+++Microsoft.NETCore.App
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\users\asus\source\repos\chatvia\chatvia\server\microsoft.netcore.app
+i:{3ceaee9a-2ab3-499a-90e6-9b8f739d1f16}:c:\users\asus\source\repos\chatvia\chatvia\shared\microsoft.netcore.app
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\users\asus\source\repos\chatvia\chatvia.domain\microsoft.netcore.app
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:c:\users\asus\source\repos\chatvia\infrastructure\microsoft.netcore.app
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\microsoft.netcore.app
+++Microsoft.AspNetCore.Components.WebAssembly.Server (6.0.2)
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:>2832
+++Microsoft.EntityFrameworkCore.SqlServer (6.0.2)
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:>2830
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:>2860
+++Microsoft.EntityFrameworkCore.Tools (6.0.2)
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:>2831
+++ChatVia.Client
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\users\asus\source\repos\chatvia\chatvia\client\chatvia.client.csproj
+i:{00000000-0000-0000-0000-000000000000}:ChatVia.Client
+++ChatVia.Shared
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\users\asus\source\repos\chatvia\chatvia\shared\chatvia.shared.csproj
+i:{00000000-0000-0000-0000-000000000000}:ChatVia.Shared
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\shared\chatvia.shared.csproj
+++Infrastructure
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\users\asus\source\repos\chatvia\infrastructure\infrastructure.csproj
+i:{00000000-0000-0000-0000-000000000000}:Infrastructure
+++Error.cshtml.cs
+i:{007bc383-d7ea-4de8-8041-8db55ebd4e8a}:c:\users\asus\source\repos\chatvia\chatvia\server\pages\error.cshtml.cs
+++WeatherForecast.cs
+i:{3ceaee9a-2ab3-499a-90e6-9b8f739d1f16}:c:\users\asus\source\repos\chatvia\chatvia\shared\weatherforecast.cs
+++ChatVia.Domain
+i:{00000000-0000-0000-0000-000000000000}:ChatVia.Domain
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:c:\users\asus\source\repos\chatvia\chatvia.domain\bin\debug\net6.0\chatvia.domain.dll
+++Base
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\users\asus\source\repos\chatvia\chatvia.domain\base\
+++Entities
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\users\asus\source\repos\chatvia\chatvia.domain\entities\
+++Enums
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\users\asus\source\repos\chatvia\chatvia.domain\enums\
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\enums\
+++Interfaces
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\users\asus\source\repos\chatvia\chatvia.domain\interfaces\
+++EntityBase.cs
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\users\asus\source\repos\chatvia\chatvia.domain\base\entitybase.cs
+++Methods
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\users\asus\source\repos\chatvia\chatvia.domain\entities\methods\
+++AppThemes.cs
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\users\asus\source\repos\chatvia\chatvia.domain\enums\appthemes.cs
+++Visibilities.cs
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\users\asus\source\repos\chatvia\chatvia.domain\enums\visibilities.cs
+++IAggregateRoot.cs
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\users\asus\source\repos\chatvia\chatvia.domain\interfaces\iaggregateroot.cs
+++IEfRepository.cs
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\users\asus\source\repos\chatvia\chatvia.domain\interfaces\iefrepository.cs
+++Microsoft.AspNetCore.Identity.EntityFrameworkCore (6.0.2)
+i:{45823810-0524-4665-b818-6c510bc97de2}:>2871
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:>2862
+++AppUser.cs
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\users\asus\source\repos\chatvia\chatvia.domain\entities\methods\appuser.cs
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\users\asus\source\repos\chatvia\chatvia.domain\entities\properties\appuser.cs
+++Chat.cs
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\users\asus\source\repos\chatvia\chatvia.domain\entities\methods\chat.cs
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\users\asus\source\repos\chatvia\chatvia.domain\entities\properties\chat.cs
+++Message.cs
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\users\asus\source\repos\chatvia\chatvia.domain\entities\methods\message.cs
+i:{45823810-0524-4665-b818-6c510bc97de2}:c:\users\asus\source\repos\chatvia\chatvia.domain\entities\properties\message.cs
+++Data
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:c:\users\asus\source\repos\chatvia\infrastructure\data\
+++Migrations
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:c:\users\asus\source\repos\chatvia\infrastructure\migrations\
+++DbConfigurations
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:c:\users\asus\source\repos\chatvia\infrastructure\data\dbconfigurations\
+++AppDbContext.cs
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:c:\users\asus\source\repos\chatvia\infrastructure\data\appdbcontext.cs
+++AppDbContextSeed.cs
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:c:\users\asus\source\repos\chatvia\infrastructure\data\appdbcontextseed.cs
+++EfRepository.cs
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:c:\users\asus\source\repos\chatvia\infrastructure\data\efrepository.cs
+++20220307064122_000.cs
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:c:\users\asus\source\repos\chatvia\infrastructure\migrations\20220307064122_000.cs
+++AppDbContextModelSnapshot.cs
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:c:\users\asus\source\repos\chatvia\infrastructure\migrations\appdbcontextmodelsnapshot.cs
+++Microsoft.AspNetCore.Identity (2.2.0)
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:>2861
+++AppUserConfigurations.cs
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:c:\users\asus\source\repos\chatvia\infrastructure\data\dbconfigurations\appuserconfigurations.cs
+++ChatConfigurations.cs
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:c:\users\asus\source\repos\chatvia\infrastructure\data\dbconfigurations\chatconfigurations.cs
+++MessageConfiguration.cs
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:c:\users\asus\source\repos\chatvia\infrastructure\data\dbconfigurations\messageconfiguration.cs
+++20220307064122_000.Designer.cs
+i:{104919d3-d9eb-4dca-bceb-5031b0351737}:c:\users\asus\source\repos\chatvia\infrastructure\migrations\20220307064122_000.designer.cs
+++wwwroot
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\wwwroot\
+++css
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\wwwroot\css\
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\wwwroot\css\open-iconic\font\css\
+++favicon.ico
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\wwwroot\favicon.ico
+++icon-192.png
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\wwwroot\icon-192.png
+++index.html
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\wwwroot\index.html
+++NavbarItems.cs
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\enums\navbaritems.cs
+++ChatsPage
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\chatspage\
+++ChatsComponent.razor
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\chatspage\chatscomponent.razor
+++ChatsComponent.razor.css
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\chatspage\chatscomponent.razor.css
+++ChatsComponent.razor.scss
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\chatspage\chatscomponent.razor.scss
+++UserItemComponent.razor
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\chatspage\useritemcomponent.razor
+++UserItemComponent.razor.css
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\chatspage\useritemcomponent.razor.css
+++UserItemComponent.razor.scss
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\chatspage\useritemcomponent.razor.scss
+++ContactsPage
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\contactspage\
+++AddContactComponent.razor
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\contactspage\addcontactcomponent.razor
+++ContactsComponent.razor
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\contactspage\contactscomponent.razor
+++ContactsComponent.razor.css
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\contactspage\contactscomponent.razor.css
+++ContactsComponent.razor.scss
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\contactspage\contactscomponent.razor.scss
+++ContactsListComponent.razor
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\contactspage\contactslistcomponent.razor
+++ContactsListComponent.razor.css
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\contactspage\contactslistcomponent.razor.css
+++ContactsListComponent.razor.scss
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\contactspage\contactslistcomponent.razor.scss
+++GroupsPage
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\groupspage\
+++AddGroupComponent.razor
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\groupspage\addgroupcomponent.razor
+++GroupsComponent.razor
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\groupspage\groupscomponent.razor
+++GroupsItemComponent.razor
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\groupspage\groupsitemcomponent.razor
+++ProfilePage
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\profilepage\
+++ProfileComponent.razor
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\profilepage\profilecomponent.razor
+++SettingsPage
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\settingspage\
+++SettingsComponent.razor
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\settingspage\settingscomponent.razor
+++FetchData.razor
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\fetchdata.razor
+++Shared
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\
+++ChatViaInput
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\chatviainput\
+++ChatViaInputComponent.razor
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\chatviainput\chatviainputcomponent.razor
+++Logo
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\logo\
+++Navbar
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\navbar\
+++NavbarComponent.razor
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\navbar\navbarcomponent.razor
+++NavbarButton
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\navbarbutton\
+++SidePanel
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\sidepanel\
+++SidePanelComponent.razor
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\sidepanel\sidepanelcomponent.razor
+++SidePanelComponent.razor.css
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\sidepanel\sidepanelcomponent.razor.css
+++SidePanelComponent.razor.scss
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\sidepanel\sidepanelcomponent.razor.scss
+++Styles
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\styles\
+++UserInfoItem
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\userinfoitem\
+++UserPanel
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\userpanel\
+++UserPanelComponent.razor
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\userpanel\userpanelcomponent.razor
+++UserPanelComponent.razor.css
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\userpanel\userpanelcomponent.razor.css
+++UserPanelComponent.razor.scss
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\userpanel\userpanelcomponent.razor.scss
+++MainLayout.razor
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\mainlayout.razor
+++_Imports.razor
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\_imports.razor
+++App.razor
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\app.razor
+++bootstrap
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\wwwroot\css\bootstrap\
+++open-iconic
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\wwwroot\css\open-iconic\
+++app.css
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\wwwroot\css\app.css
+++GroupsComponent.razor.css
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\groupspage\groupscomponent.razor.css
+++GroupsComponent.razor.scss
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\groupspage\groupscomponent.razor.scss
+++GroupsItemComponent.razor.css
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\groupspage\groupsitemcomponent.razor.css
+++GroupsItemComponent.razor.scss
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\pages\groupspage\groupsitemcomponent.razor.scss
+++ChatViaInputComponent.razor.css
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\chatviainput\chatviainputcomponent.razor.css
+++ChatViaInputComponent.razor.scss
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\chatviainput\chatviainputcomponent.razor.scss
+++LogoComponent.razor
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\logo\logocomponent.razor
+++NavbarComponent.razor.css
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\navbar\navbarcomponent.razor.css
+++NavbarComponent.razor.scss
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\navbar\navbarcomponent.razor.scss
+++NavbarButtonComponent.razor
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\navbarbutton\navbarbuttoncomponent.razor
+++Mixins.scss
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\styles\mixins.scss
+++UserInfoItemComponent.razor
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\userinfoitem\userinfoitemcomponent.razor
+++MainLayout.razor.css
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\mainlayout.razor.css
+++MainLayout.razor.scss
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\mainlayout.razor.scss
+++ILLink.CodeFixProvider
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\illink.codefixprovider.dll
+++ILLink.RoslynAnalyzer
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\illink.roslynanalyzer.dll
+++LibSassBuilder (2.0.1)
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:>2848
+++Microsoft.AspNetCore.Components.WebAssembly (6.0.2)
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:>2845
+++Microsoft.AspNetCore.Components.WebAssembly.DevServer (6.0.2)
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:>2847
+++MudBlazor (6.0.7)
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:>2846
+++bootstrap.min.css
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\wwwroot\css\bootstrap\bootstrap.min.css
+++font
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\wwwroot\css\open-iconic\font\
+++FONT-LICENSE
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\wwwroot\css\open-iconic\font-license
+++ICON-LICENSE
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\wwwroot\css\open-iconic\icon-license
+++README.md
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\wwwroot\css\open-iconic\readme.md
+++NavbarButtonComponent.razor.css
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\navbarbutton\navbarbuttoncomponent.razor.css
+++NavbarButtonComponent.razor.scss
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\navbarbutton\navbarbuttoncomponent.razor.scss
+++Mixins.css
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\styles\mixins.css
+++UserInfoItemComponent.razor.css
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\userinfoitem\userinfoitemcomponent.razor.css
+++UserInfoItemComponent.razor.scss
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\shared\userinfoitem\userinfoitemcomponent.razor.scss
+++bootstrap.min.css.map
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\wwwroot\css\bootstrap\bootstrap.min.css.map
+++fonts
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\wwwroot\css\open-iconic\font\fonts\
+++open-iconic-bootstrap.min.css
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\wwwroot\css\open-iconic\font\css\open-iconic-bootstrap.min.css
+++open-iconic.eot
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\wwwroot\css\open-iconic\font\fonts\open-iconic.eot
+++open-iconic.otf
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\wwwroot\css\open-iconic\font\fonts\open-iconic.otf
+++open-iconic.svg
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\wwwroot\css\open-iconic\font\fonts\open-iconic.svg
+++open-iconic.ttf
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\wwwroot\css\open-iconic\font\fonts\open-iconic.ttf
+++open-iconic.woff
+i:{9d06b9be-4c94-4f1f-9297-fc6ee0fb0074}:c:\users\asus\source\repos\chatvia\chatvia\client\wwwroot\css\open-iconic\font\fonts\open-iconic.woff

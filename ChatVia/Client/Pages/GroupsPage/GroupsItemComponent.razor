@@ -1,0 +1,30 @@
+﻿<div class="groups-item">
+    <MudAvatar Variant="Variant.Outlined">@Name[0]</MudAvatar>
+    <div class="groups-item__name">
+        <span>#</span>
+        @if(SearchTerm is not null)
+        {
+            <MudHighlighter Text="@Name" HighlightedText="@SearchTerm" 
+                       UntilNextBoundary="true" Class="pa-1 mud-elevation-2 mud-theme-primary"/>
+        }
+        else
+        {
+            <span>@Name</span>
+        }
+
+    </div>
+    <div class="groups-item__number">
+        <MudBadge Content="@Number" Overlap="true" Class="mx-6 my-4" />
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string Name { get; set; } = " ";
+
+    [Parameter]
+    public int Number { get; set; }
+
+    [Parameter]
+    public string? SearchTerm { get; set; }
+}

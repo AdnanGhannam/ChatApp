@@ -1,0 +1,1 @@
+.contacts-list{margin-bottom:2em !important}.contacts-list__item{display:flex;justify-content:flex-start;align-items:center;flex-direction:row;flex-wrap:nowrap;margin:0 1ch;font-weight:500;font-family:var(--ff-primary);color:var(--clr-primary-800)}.contacts-list__item:first-child{margin:0;color:var(--clr-primary)}.contacts-list__item .name{flex:1;cursor:pointer}

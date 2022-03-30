@@ -1,0 +1,35 @@
+﻿<MudTooltip Text="@Text" Placement="Placement.Right">  
+    @if(Href is not null)
+    {
+        <NavLink href="@Href" ActiveClass="active" class="nav-bar-link" Match="@Match">
+            <li class="nav-bar-item">
+                <MudIconButton Color="Color.Inherit"
+                                Class="nav-bar-item__button" Icon="@Icon" OnClick="OnClick"/>
+            </li>
+        </NavLink>
+    }
+    else
+    {
+        <li class="nav-bar-item">
+            <MudIconButton Color="Color.Inherit"
+                            Class="nav-bar-item__button" Icon="@Icon" OnClick="OnClick"/>
+        </li>
+    }
+</MudTooltip>
+
+@code {
+    [Parameter]
+    public EventCallback OnClick { get; set; }
+
+    [Parameter]
+    public NavLinkMatch Match { get; set; } = NavLinkMatch.All;
+
+    [Parameter]
+    public string? Href { get; set; }
+
+    [Parameter]
+    public string Icon { get; set; }
+
+    [Parameter]
+    public string Text { get; set; }
+}

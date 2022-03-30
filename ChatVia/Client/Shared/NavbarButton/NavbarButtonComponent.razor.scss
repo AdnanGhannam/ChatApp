@@ -1,0 +1,31 @@
+﻿@import "../Styles/Mixins.scss";
+
+.nav-bar-link {
+    &.active {
+        .nav-bar-item {
+            background-color: var(--clr-primary-200);
+            fill: var(--clr-primary);
+        }
+    }
+}
+
+.nav-bar-item {
+    @include flex();
+    transition: all .2s ease;
+    border-radius: .5em;
+    margin: .3em 0;
+    fill: var(--clr-primary-400);
+
+    ::deep .mud-icon-root {
+        font-size: 1.8rem;
+        fill: inherit;
+    }
+
+    ::deep .mud-icon-button:hover {
+        background-color: transparent;
+    }
+
+    ::deep .mud-ripple::after {
+        background-image: none !important;
+    }
+}

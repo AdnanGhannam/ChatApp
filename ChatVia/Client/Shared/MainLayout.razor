@@ -1,0 +1,70 @@
+﻿@inherits LayoutComponentBase
+@using ChatVia.Client.Enums
+@using ChatVia.Client.Shared.Navbar;
+@using ChatVia.Client.Shared.ChatPanel;
+@inject NavigationManager _navigationManager
+
+<style>
+    body{
+        overflow: hidden;
+    }
+</style>
+
+<div class="page">
+    <CascadingValue Value="this">
+        <div class="page__side-bar">
+            <NavbarComponent />
+        </div>
+
+        <CascadingValue Value="this">
+            <main style="flex: 1;">
+                <article class="page__article">
+                    <div class="page__article__body">
+                        @Body
+                    </div>
+                    <div class="page__article__chat-panel @(ArticleBodyIsActive ? "visible" : "")">
+                        <ChatPanelComponent />
+                    </div>
+                </article>
+            </main>
+        </CascadingValue>
+    </CascadingValue>
+</div>
+
+<MudThemeProvider/>
+<MudDialogProvider/>
+<MudSnackbarProvider/>
+
+@code {
+    private string? currentUserId = null;
+    public bool ArticleBodyIsActive { get; set; } = false;
+    public string CurrentUserId 
+    { 
+        get
+        {
+            return currentUserId;
+        } 
+        set
+        {
+            currentUserId = value;
+            StateHasChanged();
+        } 
+    }
+
+    public void Rerender() => StateHasChanged();
+
+    [CascadingParameter]
+    public App App { get; set; }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        Console.WriteLine("main-app: " + App.IsLoggedIn);
+        if(!App.IsLoggedIn)
+        {
+            _navigationManager.NavigateTo("/login");
+        }
+
+        base.OnAfterRender(firstRender);
+    }
+}
+

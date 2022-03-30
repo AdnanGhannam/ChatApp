@@ -1,0 +1,12 @@
+C:\Users\asus\source\repos\ChatVia\ChatVia.Domain\bin\Debug\net6.0\ChatVia.Domain.deps.json
+C:\Users\asus\source\repos\ChatVia\ChatVia.Domain\bin\Debug\net6.0\ChatVia.Domain.dll
+C:\Users\asus\source\repos\ChatVia\ChatVia.Domain\bin\Debug\net6.0\ChatVia.Domain.pdb
+C:\Users\asus\source\repos\ChatVia\ChatVia.Domain\obj\Debug\net6.0\ChatVia.Domain.csproj.AssemblyReference.cache
+C:\Users\asus\source\repos\ChatVia\ChatVia.Domain\obj\Debug\net6.0\ChatVia.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asus\source\repos\ChatVia\ChatVia.Domain\obj\Debug\net6.0\ChatVia.Domain.AssemblyInfoInputs.cache
+C:\Users\asus\source\repos\ChatVia\ChatVia.Domain\obj\Debug\net6.0\ChatVia.Domain.AssemblyInfo.cs
+C:\Users\asus\source\repos\ChatVia\ChatVia.Domain\obj\Debug\net6.0\ChatVia.Domain.csproj.CoreCompileInputs.cache
+C:\Users\asus\source\repos\ChatVia\ChatVia.Domain\obj\Debug\net6.0\ChatVia.Domain.dll
+C:\Users\asus\source\repos\ChatVia\ChatVia.Domain\obj\Debug\net6.0\refint\ChatVia.Domain.dll
+C:\Users\asus\source\repos\ChatVia\ChatVia.Domain\obj\Debug\net6.0\ChatVia.Domain.pdb
+C:\Users\asus\source\repos\ChatVia\ChatVia.Domain\obj\Debug\net6.0\ref\ChatVia.Domain.dll

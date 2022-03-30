@@ -1,0 +1,15 @@
+C:\Users\asus\source\repos\ChatVia\ChatVia.Application\bin\Debug\net6.0\ChatVia.Application.deps.json
+C:\Users\asus\source\repos\ChatVia\ChatVia.Application\bin\Debug\net6.0\ChatVia.Application.dll
+C:\Users\asus\source\repos\ChatVia\ChatVia.Application\bin\Debug\net6.0\ChatVia.Application.pdb
+C:\Users\asus\source\repos\ChatVia\ChatVia.Application\bin\Debug\net6.0\ChatVia.Domain.dll
+C:\Users\asus\source\repos\ChatVia\ChatVia.Application\bin\Debug\net6.0\ChatVia.Domain.pdb
+C:\Users\asus\source\repos\ChatVia\ChatVia.Application\obj\Debug\net6.0\ChatVia.Application.csproj.AssemblyReference.cache
+C:\Users\asus\source\repos\ChatVia\ChatVia.Application\obj\Debug\net6.0\ChatVia.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asus\source\repos\ChatVia\ChatVia.Application\obj\Debug\net6.0\ChatVia.Application.AssemblyInfoInputs.cache
+C:\Users\asus\source\repos\ChatVia\ChatVia.Application\obj\Debug\net6.0\ChatVia.Application.AssemblyInfo.cs
+C:\Users\asus\source\repos\ChatVia\ChatVia.Application\obj\Debug\net6.0\ChatVia.Application.csproj.CoreCompileInputs.cache
+C:\Users\asus\source\repos\ChatVia\ChatVia.Application\obj\Debug\net6.0\ChatVia.Application.csproj.CopyComplete
+C:\Users\asus\source\repos\ChatVia\ChatVia.Application\obj\Debug\net6.0\ChatVia.Application.dll
+C:\Users\asus\source\repos\ChatVia\ChatVia.Application\obj\Debug\net6.0\refint\ChatVia.Application.dll
+C:\Users\asus\source\repos\ChatVia\ChatVia.Application\obj\Debug\net6.0\ChatVia.Application.pdb
+C:\Users\asus\source\repos\ChatVia\ChatVia.Application\obj\Debug\net6.0\ref\ChatVia.Application.dll

@@ -1,0 +1,49 @@
+﻿@using ChatVia.Client.Enums
+@using ChatVia.Client.Services
+@using ChatVia.Client.Shared.Logo;
+@using ChatVia.Client.Shared.NavbarButton;
+@inject NavigationManager _navigationManager
+@inject IFetchService _fetch
+
+<nav class="nav-bar">
+    <div class="nav-bar__container">
+        <LogoComponent />
+
+        <ul class="nav-bar__list nav-bar__list-1">
+            <NavbarButtonComponent Icon="@Icons.Filled.Person" Text="Profile"
+                                    Href="/profile" Match="NavLinkMatch.Prefix" />
+            <NavbarButtonComponent Icon="@Icons.Filled.Chat" Text="Chats" 
+                                    Href="/chats" />
+            <NavbarButtonComponent Icon="@Icons.Filled.Group" Text="Groups" 
+                                    Href="/groups" />
+            <NavbarButtonComponent Icon="@Icons.Filled.Contacts" Text="Contacts" 
+                                    Href="/contacts" />
+            <NavbarButtonComponent Icon="@Icons.Filled.Settings" Text="Settings" 
+                                    Href="/settings" />
+        </ul>
+
+        <ul class="nav-bar__list nav-bar__list-2">
+            <NavbarButtonComponent Icon="@Icons.Filled.Language" Text="Languages"/>
+            <NavbarButtonComponent Icon="@Icons.Filled.Nightlight" Text="Night mod"/>
+            <MudMenu AnchorOrigin="Origin.TopRight" TransformOrigin="Origin.BottomLeft">
+                <ActivatorContent>
+                    <MudAvatar Class="mt-2" Image="https://www.diethelmtravel.com/wp-content/uploads/2016/04/bill-gates-wealthiest-person-279x300.jpg" />
+                </ActivatorContent>
+                <ChildContent>
+                    <MudMenuItem>Profile</MudMenuItem>
+                    <MudMenuItem>Settings</MudMenuItem>
+                    <MudMenuItem OnClick="(async () => await LogoutButtonClicked())">Logout</MudMenuItem>
+                </ChildContent>
+            </MudMenu>
+        </ul>
+    </div>
+</nav>
+
+@code {
+    async Task LogoutButtonClicked()
+    {
+        await _fetch.PostAsync<object>("api/users/logout",
+            includeCredentials: true,
+            callback: _ => _navigationManager.NavigateTo("/login"));
+    }
+}

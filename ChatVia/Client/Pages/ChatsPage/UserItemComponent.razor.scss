@@ -1,0 +1,86 @@
+﻿@import "../../Shared/Styles/Mixins.scss";
+
+.user-item {
+    @include flex(flex-start);
+    border-radius: 3px;
+    padding: 1em;
+    margin: .1em 0;
+    cursor: pointer;
+    transition: all .3s ease;
+
+    ::deep &__top {
+    }
+
+    &__center {
+        flex: 1;
+        margin: 0 1.3em;
+
+        .message {
+            margin: 0;
+            font-size: .9em;
+            color: var(--clr-primary-400);
+        }
+    }
+
+    &__bottom {
+        font-size: .75em;
+        text-align: center;
+
+        .time {
+            color: var(--clr-primary-400);
+            margin-bottom: .2em;
+        }
+
+        ::deep .messages-num {
+            .mud-badge {
+                font-size: .6rem;
+                padding: 5px 6px;
+            }
+        }
+    }
+
+    &.active,
+    &:hover,
+    &.small {
+        background-color: var(--clr-primary-300);
+    }
+
+    &.small {
+        border-radius: 7px;
+        margin: .1em .2em;
+        padding: .5em;
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        padding-top: 1.5em;
+
+        &:first-child {
+            margin-left: .1em;
+        }
+
+        &:last-child {
+            margin-right: .1em;
+        }
+
+        ::deep .user-item__top {
+            @include absolute(50%, 0px, auto, auto, -50%, -50%);
+        }
+
+        .user-item__center {
+            margin: 0 .5em;
+
+            .first-name {
+                font-size: .9em;
+            }
+
+            .last-name,
+            .message {
+                display: none;
+            }
+        }
+
+        .user-item__bottom {
+            display: none;
+        }
+    }
+}

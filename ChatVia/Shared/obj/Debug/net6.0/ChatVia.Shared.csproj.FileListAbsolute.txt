@@ -1,0 +1,15 @@
+C:\Users\asus\source\repos\ChatVia\ChatVia\Shared\bin\Debug\net6.0\ChatVia.Shared.deps.json
+C:\Users\asus\source\repos\ChatVia\ChatVia\Shared\bin\Debug\net6.0\ChatVia.Shared.dll
+C:\Users\asus\source\repos\ChatVia\ChatVia\Shared\bin\Debug\net6.0\ChatVia.Shared.pdb
+C:\Users\asus\source\repos\ChatVia\ChatVia\Shared\obj\Debug\net6.0\ChatVia.Shared.csproj.AssemblyReference.cache
+C:\Users\asus\source\repos\ChatVia\ChatVia\Shared\obj\Debug\net6.0\ChatVia.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asus\source\repos\ChatVia\ChatVia\Shared\obj\Debug\net6.0\ChatVia.Shared.AssemblyInfoInputs.cache
+C:\Users\asus\source\repos\ChatVia\ChatVia\Shared\obj\Debug\net6.0\ChatVia.Shared.AssemblyInfo.cs
+C:\Users\asus\source\repos\ChatVia\ChatVia\Shared\obj\Debug\net6.0\ChatVia.Shared.csproj.CoreCompileInputs.cache
+C:\Users\asus\source\repos\ChatVia\ChatVia\Shared\obj\Debug\net6.0\ChatVia.Shared.dll
+C:\Users\asus\source\repos\ChatVia\ChatVia\Shared\obj\Debug\net6.0\refint\ChatVia.Shared.dll
+C:\Users\asus\source\repos\ChatVia\ChatVia\Shared\obj\Debug\net6.0\ChatVia.Shared.pdb
+C:\Users\asus\source\repos\ChatVia\ChatVia\Shared\obj\Debug\net6.0\ref\ChatVia.Shared.dll
+C:\Users\asus\source\repos\ChatVia\ChatVia\Shared\bin\Debug\net6.0\ChatVia.Domain.dll
+C:\Users\asus\source\repos\ChatVia\ChatVia\Shared\bin\Debug\net6.0\ChatVia.Domain.pdb
+C:\Users\asus\source\repos\ChatVia\ChatVia\Shared\obj\Debug\net6.0\ChatVia.Shared.csproj.CopyComplete

@@ -1,0 +1,39 @@
+﻿@using System.ComponentModel.DataAnnotations
+
+<EditForm Model="@model" OnValidSubmit="OnValidSubmit">
+<DataAnnotationsValidator/>
+    <MudCard>
+        <MudCardContent>
+            <MudTextField Label="Group name" HelperText="Between 4 to 30 characters"
+                          @bind-Value="model.GroupName" For="@(() => model.GroupName)"/>
+            <MudTextField Label="Description" HelperText="Enter a description" Class="mt-3"
+                          @bind-Value="model.Description" For="@(() => model.Description)"/>
+        </MudCardContent>
+        <MudCardActions>
+            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Create group</MudButton>
+        </MudCardActions>
+    </MudCard>
+</EditForm>
+
+@code {
+    RegisterAccountForm model = new RegisterAccountForm();
+    bool success;
+
+    public class RegisterAccountForm
+    {
+        [Required]
+        [StringLength(30, ErrorMessage = "Group name length can't be more than 30.")]
+        public string GroupName { get; set; }
+
+        [Required]
+        [StringLength(200, ErrorMessage = "Description length can't be more than 200.")]
+        public string Description { get; set; }
+    }
+
+    private void OnValidSubmit(EditContext context)
+    {
+        success = true;
+        StateHasChanged();
+    }
+
+}

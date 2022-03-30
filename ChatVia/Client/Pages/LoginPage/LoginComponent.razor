@@ -1,0 +1,103 @@
+﻿@page "/login"
+@layout SignLayout
+@using System.ComponentModel.DataAnnotations
+@using ChatVia.Client.Services
+@using ChatVia.Shared.Helpers
+@using Blazored.SessionStorage;
+@using Blazored.LocalStorage;
+@inject NavigationManager _navigationManager
+@inject IFetchService _fetch
+@inject ILocalStorageService localStorage
+@inject ISessionStorageService sessionStorage
+
+<PageTitle>Login Page</PageTitle>
+
+<EditForm Model="@model" OnValidSubmit="OnValidSubmit" class="login-page__body">
+<DataAnnotationsValidator/>
+    <MudCard>
+        <MudCardContent>
+            <MudTextField Label="First name" HelperText="Max. 8 characters"
+                          @bind-Value="model.Username" For="@(() => model.Username)"/>
+            <MudTextField Label="Password" HelperText="Choose a strong password" Class="mt-3"
+                          @bind-Value="model.Password" For="@(() => model.Password)" InputType="InputType.Password"/>
+        </MudCardContent>
+        <MudCardActions Class="d-flex align-center justify-space-between mt-6 p-3">
+            <MudCheckBox T="bool" Class="ml-n2" Label="Remember me" @bind-Checked="boxChecked"/>
+            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Create group</MudButton>
+        </MudCardActions>
+        @if(response.Errors?.Count() > 0)
+        {
+            @foreach(var error in response.Errors)
+            {
+                <MudCardActions Class="p-2">
+                    <strong style="color: #ff3a3a; font-size: .83em;">
+                        *@error.Code: @error.Description
+                    </strong>
+                </MudCardActions>
+            }
+        }
+    </MudCard>
+</EditForm>
+
+
+@code {
+    [CascadingParameter]
+    public SignLayout Layout { get; set; }
+
+    [CascadingParameter]
+    public App App { get; set; }
+
+    private ResponseModel<string> response = new();
+
+    private bool boxChecked = false;
+
+    protected override void OnInitialized()
+    {
+        Layout.SetValues("Sign in", "Sign in to continue to Chatvia.", "Don't have an account? register from", "/register");
+
+        base.OnInitialized();
+    }
+
+    RegisterAccountForm model = new RegisterAccountForm();
+
+    public class RegisterAccountForm
+    {
+        [Required]
+        [StringLength(100, ErrorMessage = "Name length can't be more than 8.")]
+        public string Username { get; set; }
+
+        [Required]
+        [StringLength(30, ErrorMessage = "Password must be at least 8 characters long.", MinimumLength = 1)]
+        public string Password { get; set; }
+    }
+
+    private async Task OnValidSubmit(EditContext context)
+    {
+        var headers = new Dictionary<string, string>();
+        headers.Add("username", model.Username);
+        headers.Add("password", model.Password);
+        headers.Add("isPersistent", boxChecked.ToString());
+
+        await _fetch.PostAsync<ResponseModel<string>>(
+            "api/users/login",
+            headers,
+            callback: r => {
+                response = r;
+                App.IsLoggedIn = true;
+
+                if(r.Data is not null)
+                {
+                    if (boxChecked)
+                    {
+                        localStorage.SetItemAsync("username", r.Data);
+                    }
+                    else
+                    {
+                        sessionStorage.SetItemAsync("username", r.Data);
+                    }
+                }
+                _navigationManager.NavigateTo("/");
+            });
+
+    }
+}

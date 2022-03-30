@@ -1,0 +1,63 @@
+﻿@using System.ComponentModel.DataAnnotations
+@using ChatVia.Client.Services
+@using ChatVia.Shared.Helpers
+@using ChatVia.Shared.ResponseDtos
+@inject IFetchService _fetch
+@inject NavigationManager _navigationManager
+
+<EditForm Model="@model" OnValidSubmit="OnValidSubmit">
+<DataAnnotationsValidator/>
+    <MudCard>
+        <MudCardContent>
+            <MudTextField Label="Username" HelperText=""
+                          @bind-Value="model.Username" For="@(() => model.Username)"/>
+        </MudCardContent>
+        <MudCardActions>
+            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Create group</MudButton>
+        </MudCardActions>
+        @if(response.Data is not null)
+        {
+            <MudCardActions Class="p-2">
+                <strong style="color: #3aff3a; font-size: .83em;">
+                    - Contact added
+                </strong>
+            </MudCardActions>
+        }
+        @if(response.Errors?.Count() > 0)
+        {
+            @foreach(var error in response.Errors)
+            {
+                <MudCardActions Class="p-2">
+                    <strong style="color: #ff3a3a; font-size: .83em;">
+                        *@error.Code: @error.Description
+                    </strong>
+                </MudCardActions>
+            }
+        }
+    </MudCard>
+</EditForm>
+
+@code {
+    RegisterAccountForm model = new RegisterAccountForm();
+    bool success;
+
+    public class RegisterAccountForm
+    {
+        [Required]
+        public string Username { get; set; }
+    }
+
+    private ResponseModel<AppUserListDto> response = new();
+
+    private async Task OnValidSubmit(EditContext context)
+    {
+        var headers = new Dictionary<string, string>();
+        headers.Add("contactName", model.Username);
+
+        await _fetch.PostAsync<ResponseModel<AppUserListDto>>(
+            "api/users/add-contact",
+            headers,
+            includeCredentials: true,
+            callback: r => response = r);
+    }
+}

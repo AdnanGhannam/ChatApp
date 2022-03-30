@@ -1,0 +1,130 @@
+﻿@page "/"
+@page "/chats"
+@using ChatVia.Client.Services
+@using ChatVia.Client.Shared.SidePanel;
+@using ChatVia.Shared.Helpers
+@using ChatVia.Shared.ResponseDtos
+@inject IFetchService _fetch
+
+<PageTitle>Chats</PageTitle>
+
+<SidePanelComponent Title="Chats">
+    <ChildContentHeader>
+        <MudTextField @bind-Value="@searchTerm" AdornmentIcon="@Icons.Filled.Search"
+                      Adornment="Adornment.Start" Immediate="true" Variant="Variant.Outlined" 
+                      Placeholder="Search chats..." class="custom-input"/>
+    </ChildContentHeader>
+
+    <ChildContent>
+        @if(response.Data is not null)
+        {
+            <div class="chats">
+                <div class="chats__small-list-box">
+                    <ul class="chats__small-list">
+                        @foreach(var item in items)
+                        {
+                            <UserItemComponent FirstName="@item.FirstName" IsSmall
+                                                Color="Color.Success" 
+                                                OnClick="@(() => OnItemClick(@item.Id))" ImageUrl="@("/images/avatar-" + item.Id + ".jpg")"/>
+                        }
+                    </ul>
+                </div>
+
+                <h6 class="chats__sub-title">Recent</h6>
+
+                <div class="chats__big-list-box">
+                    <ul class="chats__big-list">
+                        @foreach(var item in response.Data)
+                        {
+                            <UserItemComponent FirstName="@item.Member.UserName" LastName="" LastMessage="@item.Message?.Content" 
+                                                NumberOfMessages="20" Time="@item.Message?.CreationTime.ToShortTimeString()" 
+                                                Color="@(true ? Color.Success : null)" IsActive="@item.IsActive" 
+                                                OnClick="@(() => OnItemClick(@item.Id))" ImageUrl="@("/images/avatar-1.jpg")"/>
+                        }
+                    </ul>
+                </div>
+            </div>
+        }
+    </ChildContent>
+</SidePanelComponent>
+
+@code {
+    private string searchTerm = "";
+
+    [CascadingParameter]
+    public MainLayout MainLayout { get; set; }
+
+    private void OnItemClick(string id)
+    {
+        response.Data?.ForEach(item =>
+        {
+            item.IsActive = false;
+        });
+
+        var item = response.Data?.FirstOrDefault(i => i.Id == id);
+
+        if(item is not null)
+        {
+            item.IsActive = true;
+            MainLayout.ArticleBodyIsActive = true;
+            MainLayout.CurrentUserId = id;
+        }
+    }
+
+
+    //
+
+    private ResponseModel<List<ChatListDto>> response = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        await _fetch.GetAsync<ResponseModel<List<ChatListDto>>>(
+            "api/chats/user",
+            includeCredentials: true,
+            callback: r => response = r);
+    }
+
+    //
+
+    private List<ChatItem> items = new()
+    {
+        new("1", "Patrick", "Hendricks", "Okay sure😄👍", "02:50", 20, true, true),
+        new("2", "Mark", "Messer", "images", "10:30", 20, false, true),
+        new("3", "General", "", "This theme is Awesome", "02:06"),
+        new("4", "Doris", "Brown", "typing...", "10:05"),
+        new("5", "Designer", "", "Next meeting tomorrow 10.00AM", "02:10", 20),
+    };
+
+    class ChatItem
+    {
+        public string Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string LastMessage { get; set; }
+        public string Time { get; set; }
+        public int? Number { get; set; }
+        public bool IsActive { get; set; }
+        public bool IsOnline { get; set; }
+
+        public ChatItem(string id, 
+            string firstName, 
+            string lastName, 
+            string lastMessage, 
+            string time, 
+            int? num = null, 
+            bool isActive = false,
+            bool isOnline = false)
+        {
+            Id = id;
+            FirstName = firstName;
+            LastName = lastName;
+            LastMessage = lastMessage;
+            Time = time;
+            Number = num;
+            IsActive = isActive;
+            IsOnline = isOnline;
+        }
+    }
+}

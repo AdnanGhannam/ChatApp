@@ -1,0 +1,45 @@
+﻿@using Blazored.LocalStorage;
+@using Blazored.SessionStorage;
+@inject ILocalStorageService _localStorage
+@inject ISessionStorageService _sessionStorage
+
+<Router AppAssembly="@typeof(App).Assembly">
+    <Found Context="routeData">
+        <CascadingValue Value="this">
+                <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        </CascadingValue>
+    </Found>
+    <NotFound>
+        <PageTitle>Not found</PageTitle>
+        <LayoutView Layout="@typeof(EmptyLayout)">
+            <h5 style="margin: .5em" role="alert">Sorry, there's nothing at this address.</h5>
+        </LayoutView>
+    </NotFound>
+</Router>
+
+@code {
+    public bool IsLoggedIn { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CheckIfLoggedIn();
+
+        await base.OnInitializedAsync();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await CheckIfLoggedIn();
+
+        await base.OnAfterRenderAsync(firstRender);
+    }
+
+    async Task CheckIfLoggedIn()
+    {
+        IsLoggedIn = 
+            (await _localStorage.GetItemAsync<string>("username") ?? 
+            await _sessionStorage.GetItemAsync<string>("username")) == null ? false : true;
+
+        Console.WriteLine("IsLoggedIn: " + IsLoggedIn);
+    }
+}

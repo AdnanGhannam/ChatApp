@@ -1,0 +1,37 @@
+﻿@import "../Styles/Mixins.scss";
+
+.panel {
+    @include flex(stretch, stretch, column);
+    $padding: 1.5em;
+    height: 100%;
+    padding-top: $padding;
+    background-color: var(--clr-primary-200);
+
+    &__header {
+        @include flex(space-between);
+        padding: 0 $padding .5em $padding;
+
+        &__title {
+        }
+    }
+
+    &__body {
+        @include flex(stretch, stretch, column);
+        $padding: 1.5em;
+        flex: 1;
+        max-height: 100%;
+        padding-bottom: 1em;
+        overflow: hidden;
+
+        &__header {
+            padding: $padding;
+            padding-top: 0px;
+        }
+
+        &__content {
+            padding: $padding;
+            flex: 1;
+            overflow: auto;
+        }
+    }
+}

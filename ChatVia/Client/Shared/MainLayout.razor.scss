@@ -1,0 +1,62 @@
+﻿@import "./Styles/Mixins.scss";
+
+.page {
+    @include flex(stretch, stretch);
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--clr-page-bg);
+
+    &__side-bar {
+        box-shadow: var(--shadow-r);
+        z-index: 100;
+    }
+
+    &__article {
+        @include flex(stretch, stretch);
+        position: relative;
+        height: 100vh;
+
+        @include smallScreen {
+            height: calc(100vh - 4em)
+        }
+
+        &__body {
+            width: 380px;
+
+            @include smallScreen {
+                width: 300px;
+            }
+
+            @include smallerScreen {
+                width: 100%;
+            }
+        }
+
+        &__chat-panel {
+            box-shadow: var(--shadow-l);
+            z-index: 10;
+            flex: 1;
+            transition: all .3s ease;
+
+            &.visible {
+                @include smallerScreen {
+                    left: 0;
+                }
+            }
+
+            @include smallScreen {
+                box-shadow: none;
+            }
+
+            @include smallerScreen {
+                @include absolute(100%, 0px, 0px, 0px);
+                background-color: var(--clr-primary-100);
+            }
+        }
+    }
+
+    @include smallScreen {
+        flex-direction: column-reverse;
+    }
+}

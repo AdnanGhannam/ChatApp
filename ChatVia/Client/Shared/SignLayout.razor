@@ -1,0 +1,68 @@
+﻿@inherits LayoutComponentBase
+@inject NavigationManager _navigationManager
+
+<CascadingValue Value="this">
+    <section class="login-page">
+        <header class="login-page__header">
+            <div class="login-page__img-box">
+                <img src="/images/index.png" alt="logo"/>
+            </div>
+            <div class="login-page__top">
+                <h4>@Title</h4>
+                <span class="login-page__top__sub-title">@SubTitle</span>
+            </div>
+        </header>
+
+        <div class="login-page__body">
+            @Body
+        </div>
+
+        <footer class="login-page__footer">
+            <span class="">
+                @FooterContent
+                <NavLink href="@FooterLink">here</NavLink>
+            </span>
+            <p>
+                © 2021 Chatvia. Crafted with by ❤ Adnan-Ghannam
+            </p>
+        </footer>
+    </section>
+</CascadingValue>
+
+<MudThemeProvider/>
+<MudDialogProvider/>
+<MudSnackbarProvider/>
+
+@code {
+    public string Title { get; set; }
+
+    public string SubTitle { get; set; }
+
+    public string FooterContent { get; set; }
+
+    public string FooterLink { get; set; }
+
+    public void SetValues(string title, string subTitle, string footerContent, string footerLink)
+    {
+        Title = title;
+        SubTitle = subTitle;
+        FooterContent = footerContent;
+        FooterLink = footerLink;
+
+        StateHasChanged();
+    }
+
+    [CascadingParameter]
+    public App App { get; set; }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        Console.WriteLine("sign-app: " + App.IsLoggedIn);
+        if(App.IsLoggedIn)
+        {
+            _navigationManager.NavigateTo("/");
+        }
+
+        base.OnAfterRender(firstRender);
+    }
+}

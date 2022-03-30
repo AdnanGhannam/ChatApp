@@ -1,0 +1,18 @@
+﻿<div class="input-box">
+    @if(Icon is not null)
+    {
+        <MudIcon Icon="Icon" Class="input-box__icon"/>
+    }
+    <input class="input-box__input" @bind-value="Value"/>
+</div>
+
+@code {
+    [Parameter]
+    public string Value { get; set; } = "";
+
+    [Parameter]
+    public string PlaceHolder { get; set; } = "";
+
+    [Parameter]
+    public string? Icon { get; set; }
+}

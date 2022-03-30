@@ -1,0 +1,44 @@
+﻿<section class="panel @Class">
+    <header class="panel__header">
+        <h4 class="panel__header__title">
+            @if(Title is not null)
+            {
+                @Title
+            }
+        </h4>
+
+        @if(HeaderButton is not null)
+        {
+            @HeaderButton
+        }
+    </header>
+
+    <div class="panel__body">
+        @if(ChildContentHeader is not null)
+        {
+            <div class="panel__body__header">
+                @ChildContentHeader
+            </div>
+        }
+        <div class="panel__body__content">
+            @ChildContent
+        </div>
+    </div>
+</section>
+
+@code {
+    [Parameter]
+    public string Class { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContentHeader { get; set; }
+
+    [Parameter]
+    public string? Title { get; set; }
+
+    [Parameter]
+    public RenderFragment? HeaderButton { get; set; }
+}

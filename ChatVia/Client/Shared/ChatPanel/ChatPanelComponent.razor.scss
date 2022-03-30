@@ -1,0 +1,75 @@
+﻿@import "../Styles/Mixins.scss";
+
+$padding: 1.5em;
+$border: 1px solid var(--clr-primary-300);
+
+.chat-panel {
+    @include flex(stretch, stretch, column);
+    height: 100%;
+    flex: 1;
+
+    > * {
+        padding: $padding;
+    }
+
+    &__top {
+        @include flex(space-between);
+        border-bottom: $border;
+
+        ::deep &__back-btn {
+            display: none;
+
+            @include smallerScreen {
+                margin-right: .5em;
+                display: block;
+            }
+        }
+
+        &__user-box {
+            @include flex(flex-start);
+            color: var(--clr-primary-800);
+
+            .user-name {
+                flex: 1;
+                display: inline-block;
+                margin: 0 .5em;
+                font-weight: 600;
+            }
+
+            .circle {
+                $size: 6px;
+                width: $size;
+                height: $size;
+                display: inline-block;
+                border-radius: 50%;
+                background-color: var(--clr-online);
+
+                &--offline {
+                    background-color: var(--clr-offline);
+                }
+            }
+        }
+
+        &__ctrl-box {
+            @include flex(flex-end);
+        }
+    }
+
+    &__center {
+        @include flex(unset, unset, column-reverse);
+        overflow: auto;
+        flex: 1;
+    }
+
+    &__bottom {
+        @include flex();
+        border-top: $border;
+
+        ::deep &__input {
+            flex: 1;
+            margin-right: 1.5em;
+            margin-top: 0;
+        }
+    }
+}
+

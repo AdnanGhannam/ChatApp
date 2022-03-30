@@ -1,0 +1,65 @@
+﻿@page "/register"
+@layout SignLayout
+@using System.ComponentModel.DataAnnotations
+
+<PageTitle>Register Page</PageTitle>
+
+<EditForm Model="@model" OnValidSubmit="OnValidSubmit" class="login-page__body">
+<DataAnnotationsValidator/>
+    <MudCard>
+        <MudCardContent>
+            <MudTextField Label="Email" HelperText="Your email address"
+                          @bind-Value="model.Username" For="@(() => model.Username)" InputType="InputType.Email"/>
+            <MudTextField Label="First name" HelperText="Max. 8 characters"
+                          @bind-Value="model.Username" For="@(() => model.Username)"/>
+            <MudTextField Label="Password" HelperText="Choose a strong password" Class="mt-3"
+                          @bind-Value="model.Password" For="@(() => model.Password)" InputType="InputType.Password"/>
+            <MudTextField Label="Password" HelperText="Repeat the password" Class="mt-3"
+                          @bind-Value="model.Password2" For="@(() => model.Password2)" InputType="InputType.Password"/>
+        </MudCardContent>
+        <MudCardActions Class="mt-6 p-3">
+            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Create group</MudButton>
+        </MudCardActions>
+    </MudCard>
+</EditForm>
+
+
+@code {
+    [CascadingParameter]
+    public SignLayout Layout { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Layout.SetValues("Register", "Get your Chatvia account now.", "Already have an account? sign in from", "/login");
+
+        base.OnInitialized();
+    }
+
+    RegisterAccountForm model = new RegisterAccountForm();
+    bool success;
+
+    public class RegisterAccountForm
+    {
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+
+        [Required]
+        [StringLength(8, ErrorMessage = "Name length can't be more than 8.")]
+        public string Username { get; set; }
+
+        [Required]
+        [StringLength(30, ErrorMessage = "Password must be at least 8 characters long.", MinimumLength = 8)]
+        public string Password { get; set; }
+
+        [Required]
+        [Compare(nameof(Password))]
+        public string Password2 { get; set; }
+    }
+
+    private void OnValidSubmit(EditContext context)
+    {
+        success = true;
+        StateHasChanged();
+    }
+}

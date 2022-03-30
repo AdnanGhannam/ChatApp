@@ -1,0 +1,123 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = browser
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = ChatVia.Client
+build_property.RootNamespace = ChatVia.Client
+build_property.ProjectDir = C:\Users\asus\source\repos\ChatVia\ChatVia\Client\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\asus\source\repos\ChatVia\ChatVia\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Pages/ContactsPage/AddContactComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdHNQYWdlXEFkZENvbnRhY3RDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Pages/GroupsPage/AddGroupComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3JvdXBzUGFnZVxBZGRHcm91cENvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Pages/ProfilePage/ProfileComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZVBhZ2VcUHJvZmlsZUNvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Pages/RegisterPage/RegisterComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXJQYWdlXFJlZ2lzdGVyQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Pages/SettingsPage/SettingsComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2V0dGluZ3NQYWdlXFNldHRpbmdzQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Shared/EmptyLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEVtcHR5TGF5b3V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Shared/Logo/LogoComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ29cTG9nb0NvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Pages/ChatsPage/ChatsComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhdHNQYWdlXENoYXRzQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-9luuyvdnzp
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Pages/ChatsPage/UserItemComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhdHNQYWdlXFVzZXJJdGVtQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-hehzmajy8v
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Pages/ContactsPage/ContactsComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdHNQYWdlXENvbnRhY3RzQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-ysyo5skbv1
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Pages/ContactsPage/ContactsListComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdHNQYWdlXENvbnRhY3RzTGlzdENvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-999b78sfmd
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Pages/GroupsPage/GroupsComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3JvdXBzUGFnZVxHcm91cHNDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-e0iu8rr3g2
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Pages/GroupsPage/GroupsItemComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3JvdXBzUGFnZVxHcm91cHNJdGVtQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-akira4ahg7
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Pages/LoginPage/LoginComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5QYWdlXExvZ2luQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-7803syynza
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Shared/ChatPanel/ChatPanelComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENoYXRQYW5lbFxDaGF0UGFuZWxDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-atyt7zxkjg
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Shared/ChatPanel/MessageComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENoYXRQYW5lbFxNZXNzYWdlQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-ry14dhn2j4
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Shared/ChatViaInput/ChatViaInputComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENoYXRWaWFJbnB1dFxDaGF0VmlhSW5wdXRDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ozbb1crgv0
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-zl7zurm7lo
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Shared/NavbarButton/NavbarButtonComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdmJhckJ1dHRvblxOYXZiYXJCdXR0b25Db21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-9r8yex8dhn
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Shared/Navbar/NavbarComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdmJhclxOYXZiYXJDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-dvl2d25t3o
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Shared/SidePanel/SidePanelComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNpZGVQYW5lbFxTaWRlUGFuZWxDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-hvrql5mcu6
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Shared/SignLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNpZ25MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-q700o63qmd
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Shared/UserInfoItem/UserInfoItemComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFVzZXJJbmZvSXRlbVxVc2VySW5mb0l0ZW1Db21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-x35flot4jj
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Shared/UserPanel/UserPanelComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFVzZXJQYW5lbFxVc2VyUGFuZWxDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-wfb0ja81iz

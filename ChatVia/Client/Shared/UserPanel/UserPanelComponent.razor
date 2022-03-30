@@ -1,0 +1,79 @@
+﻿@using ChatVia.Client.Shared.SidePanel;
+
+<SidePanelComponent Title="@Title" HeaderButton="@HeaderButton">
+    <ChildContentHeader>
+        <div class="top">
+            <div style="position: relative">
+                @if(InEditMode)
+                {
+                    <span class="edit-icon">
+                        <MudIcon Icon="@Icons.Filled.Edit" Size="Size.Small"/>
+                    </span>
+                }
+                <div class="img-box">
+                    <img src="@ImageUrl" alt="@Username"/>
+                </div>
+            </div>
+            <strong>@Username</strong>
+            <div class="online-box">
+                @if (InEditMode)
+                {
+                    <MudSelect Value="@("Active")" Variant="Variant.Text">
+                        <MudSelectItem Value="@("Active")" />
+                        <MudSelectItem Value="@("Busy")" />
+                    </MudSelect>
+                }
+                else
+                {
+                    <span class='circle @(IsOnline ? "circle--online" : "circle--offline")'></span>
+                    <span class="text">@(IsOnline ? "Active" : "Not Active")</span>
+                }
+            </div>
+        </div>
+    </ChildContentHeader>
+
+    <ChildContent>
+        @if(Bio is not null)
+        {
+            <div class="middel">
+                <p class="bio">@Bio</p>
+            </div>
+        }
+
+        <div class="bottom">
+            @ChildContent
+        </div>
+    </ChildContent>
+</SidePanelComponent>
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+
+    [Parameter]
+    public string? Title { get; set; }
+
+    [Parameter]
+    public RenderFragment? HeaderButton { get; set; }
+
+    [Parameter]
+    public string Username { get; set; }
+
+    [Parameter]
+    public string ImageUrl { get; set; }
+
+    [Parameter]
+    public bool IsOnline { get; set; }
+
+    [Parameter]
+    public string? Bio { get; set; }
+
+    [Parameter]
+    public bool EditingMode { get; set; } = false;
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public bool InEditMode { get; set; } = false;
+}

@@ -1,0 +1,12 @@
+﻿<li class="user-info-item">
+    <span class="user-info-item__title">@Title</span>
+    <p class="user-info-item__content">@ChildContent</p>
+</li>
+
+@code {
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}

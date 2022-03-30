@@ -1,0 +1,61 @@
+﻿@using ChatVia.Client.Services
+@using ChatVia.Shared.Helpers
+@using ChatVia.Shared.ResponseDtos
+@inject IFetchService _fetch 
+
+<ul class="contacts-list" style="display: @(display ?? "")">
+    <li class="contacts-list__item">@Character</li>
+    @foreach (var name in Names)
+    {
+        <li class="contacts-list__item">
+            <strong class="name">
+                <MudHighlighter Text="@name" HighlightedText="@SearchTerm" 
+                           UntilNextBoundary="true" Class="pa-1 mud-elevation-2 mud-theme-primary"/>
+            </strong>
+            <MudMenu Icon="@Icons.Material.Filled.MoreVert" TransformOrigin="Origin.TopRight">
+                <MudMenuItem OnClick="@(async () => await StartChat(name))">Start Chat</MudMenuItem>
+                <MudMenuItem OnClick="@(async () => await RemoveContact(name))">Remove</MudMenuItem>
+            </MudMenu>
+        </li>
+    }
+</ul>
+
+@code {
+    [Parameter]
+    public char Character { get; set; }
+
+    [Parameter]
+    public List<string>? Names { get; set; }
+
+    [Parameter]
+    public string? SearchTerm { get; set; }
+
+    private string? display = null;
+
+    [CascadingParameter]
+    public MainLayout MainLayout { get; set; }
+
+    private async Task StartChat(string username)
+    {
+        var headers = new Dictionary<string, string>();
+        headers.Add("username", username);
+
+        await _fetch.PostAsync<ResponseModel<ChatDto>>(
+            "api/chats/create",
+            headers,
+            includeCredentials: true,
+            callback: r => MainLayout.CurrentUserId = r.Data?.Id);
+    }
+
+    private async Task RemoveContact(string username)
+    {
+        var headers = new Dictionary<string, string>();
+        headers.Add("contactName", username);
+
+        await _fetch.PostAsync<ResponseModel<string>>(
+            "api/users/remove-contact",
+            headers,
+            includeCredentials: true,
+            callback: _ => display = "none");
+    }
+}

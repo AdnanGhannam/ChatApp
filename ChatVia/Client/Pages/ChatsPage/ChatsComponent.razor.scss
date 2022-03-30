@@ -1,0 +1,31 @@
+﻿@import "../../Shared/Styles/Mixins.scss";
+
+.chats {
+    &__small-list-box {
+        width: 100%;
+        overflow: auto;
+        padding-bottom: .1em;
+    }
+
+    &__small-list {
+        @include flex(flex-start);
+        /* Should be auto */
+        overflow-x: auto;
+        padding-top: 1.5em !important;
+        padding-bottom: .2em !important;
+
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__sub-title {
+        margin: 1.5em 0;
+    }
+
+    &__big-list {
+
+    }
+}

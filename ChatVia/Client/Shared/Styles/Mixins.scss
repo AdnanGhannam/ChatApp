@@ -1,0 +1,40 @@
+﻿@mixin flex($j: center, $a: center, $dir: row, $wrap: nowrap) {
+    display: flex;
+    justify-content: $j;
+    align-items: $a;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+}
+
+@mixin grid($c: auto, $r: auto, $cg: 0px, $rg: 0xp) {
+    display: grid;
+    grid-template-columns: $c;
+    grid-template-rows: $r;
+    column-gap: $cg;
+    row-gap: $rg;
+}
+
+@mixin absolute($l: auto, $t: auto, $r: auto, $b: auto, $x: 0px, $y: 0px) {
+    position: absolute;
+    left: $l;
+    right: $r;
+    top: $t;
+    bottom: $b;
+    transform: translate($x, $y);
+}
+
+@mixin smallScreen {
+    $smallScreen-width: 1024px;
+
+    @media (max-width: #{$smallScreen-width}) {
+        @content;
+    }
+}
+
+@mixin smallerScreen {
+    $tab-width: 850px;
+
+    @media (max-width: #{$tab-width}) {
+        @content;
+    }
+}

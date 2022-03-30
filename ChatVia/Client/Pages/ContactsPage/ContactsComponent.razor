@@ -1,0 +1,81 @@
+﻿@page "/contacts"
+@using ChatVia.Client.Services
+@using ChatVia.Client.Shared.SidePanel;
+@using ChatVia.Shared.Helpers
+@using ChatVia.Shared.ResponseDtos
+@inject IDialogService DialogService
+@inject IFetchService _fetch
+
+<PageTitle>Contacts</PageTitle>
+
+<SidePanelComponent Title="Contacts">
+    <HeaderButton>
+        <MudIconButton Icon="@Icons.Filled.GroupAdd" @onclick="OpenDialog"/>
+    </HeaderButton>
+    <ChildContentHeader>
+        <MudTextField @bind-Value="@searchTerm" AdornmentIcon="@Icons.Filled.Search"
+                      Adornment="Adornment.Start" Immediate="true" Variant="Variant.Outlined" 
+                      Placeholder="Search contacts..." class="custom-input" />
+    </ChildContentHeader>
+    <ChildContent>
+        @if(response.Data is not null)
+        {
+            <div class="list-of-lists">
+                @for (var letter = 'A'; letter <= 'Z'; letter++)
+                {
+                    @ClearBuffer()
+                    @foreach (var contact in response.Data)
+                    {
+                        @if(contact.UserName.ToUpper()[0] == letter)
+                        {
+                            @AddToBuffer(contact.UserName)
+                        }
+                    }
+                    @if(buffer.Count() != 0)
+                    {
+                        <ContactsListComponent Character="letter" Names="@buffer.ToList()" SearchTerm="searchTerm"/>
+                    }
+                }
+            </div>
+        }
+    </ChildContent>
+</SidePanelComponent>
+@code {
+    string searchTerm = "";
+
+    List<string> buffer = new List<string>();
+
+    private ResponseModel<List<AppUserListDto>> response = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        await _fetch.GetAsync<ResponseModel<List<AppUserListDto>>>(
+            "api/users/contacts",
+            includeCredentials: true,
+            callback: r => response = r);
+    }
+
+    string ClearBuffer()
+    {
+        buffer.Clear();
+        return "";
+    }
+    string AddToBuffer(string name)
+    {
+        buffer.Add(name);
+        return "";
+    }
+
+    private void OpenDialog()
+    {    
+        DialogOptions dialogOptions = new DialogOptions() 
+                    { MaxWidth = MaxWidth.Small, FullWidth = true, CloseOnEscapeKey = true, CloseButton = true, };
+
+        DialogParameters dialogParameters = new DialogParameters();
+        dialogParameters.Add("Parent", this);
+
+        DialogService.Show<AddContactComponent>("Add Contacts", dialogParameters, dialogOptions);
+    }
+}

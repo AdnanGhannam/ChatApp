@@ -1,0 +1,59 @@
+﻿@import "../Styles/Mixins.scss";
+
+.nav-bar {
+    width: 5rem;
+    padding: .2rem 0 1.2rem;
+    height: 100%;
+
+    @include smallScreen {
+        width: 100%;
+        padding: .2rem 0;
+    }
+
+    &__container {
+        @include flex(space-between, stretch, column);
+        height: 100%;
+
+        @include smallScreen {
+            flex-direction: row;
+            padding: 0 1em;
+        }
+
+        ::deep .logo {
+            margin: 0 auto;
+            padding: 1em .5em;
+            box-sizing: content-box;
+
+            @include smallScreen {
+                display: none;
+            }
+
+            .logo-svg {
+                $logoSize: 30px;
+                width: $logoSize;
+                height: $logoSize;
+            }
+        }
+    }
+
+    &__list {
+        @include flex(center, center, column);
+
+        @include smallScreen {
+            &-1 {
+                flex: 1;
+                justify-content: space-around;
+                flex-direction: row;
+            }
+
+            &-2 {
+                justify-content: unset;
+
+                ::deep > div:nth-child(1),
+                ::deep > div:nth-child(2) {
+                    display: none
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+﻿@import "../Styles/Mixins.scss";
+
+.input-box {
+    @include flex(flex-stretch, flex-stretch);
+    padding: .5em 1em;
+
+    ::deep &__icon {
+
+    }
+
+    &__input {
+        flex: 1;
+        margin-left: .5em;
+    }
+}
