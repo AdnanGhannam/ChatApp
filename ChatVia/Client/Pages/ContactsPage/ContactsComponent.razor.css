@@ -1,1 +1,1 @@
-.list-of-lists{padding-left:1.5em}
+.list-of-lists{display:flex;justify-content:unset;align-items:unset;flex-direction:column;flex-wrap:nowrap;padding-left:1.5em}::deep .list-of-lists__loader{align-self:center}

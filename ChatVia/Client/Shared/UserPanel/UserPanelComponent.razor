@@ -10,9 +10,12 @@
                         <MudIcon Icon="@Icons.Filled.Edit" Size="Size.Small"/>
                     </span>
                 }
-                <div class="img-box">
-                    <img src="@ImageUrl" alt="@Username"/>
-                </div>
+                @if(ImageUrl is not null)
+                {
+                    <div class="img-box">
+                        <img src="@ImageUrl" alt="@Username"/>
+                    </div>
+                }
             </div>
             <strong>@Username</strong>
             <div class="online-box">
@@ -23,10 +26,10 @@
                         <MudSelectItem Value="@("Busy")" />
                     </MudSelect>
                 }
-                else
+                else if(IsOnline is not null)
                 {
-                    <span class='circle @(IsOnline ? "circle--online" : "circle--offline")'></span>
-                    <span class="text">@(IsOnline ? "Active" : "Not Active")</span>
+                    <span class='circle @((bool)IsOnline ? "circle--online" : "circle--offline")'></span>
+                    <span class="text">@((bool)IsOnline ? "Active" : "Not Active")</span>
                 }
             </div>
         </div>
@@ -60,10 +63,10 @@
     public string Username { get; set; }
 
     [Parameter]
-    public string ImageUrl { get; set; }
+    public string? ImageUrl { get; set; }
 
     [Parameter]
-    public bool IsOnline { get; set; }
+    public bool? IsOnline { get; set; } = false;
 
     [Parameter]
     public string? Bio { get; set; }

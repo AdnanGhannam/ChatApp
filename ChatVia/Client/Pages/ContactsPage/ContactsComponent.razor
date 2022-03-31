@@ -18,9 +18,9 @@
                       Placeholder="Search contacts..." class="custom-input" />
     </ChildContentHeader>
     <ChildContent>
-        @if(response.Data is not null)
-        {
-            <div class="list-of-lists">
+        <div class="list-of-lists">
+            @if(response.Data is not null)
+            {
                 @for (var letter = 'A'; letter <= 'Z'; letter++)
                 {
                     @ClearBuffer()
@@ -36,8 +36,12 @@
                         <ContactsListComponent Character="letter" Names="@buffer.ToList()" SearchTerm="@searchTerm"/>
                     }
                 }
-            </div>
-        }
+            }
+            else
+            {
+                <MudProgressCircular Color="Color.Primary" Size="Size.Small" Indeterminate="true" Class="list-of-lists__loader"/>
+            }
+        </div>
     </ChildContent>
 </SidePanelComponent>
 @code {

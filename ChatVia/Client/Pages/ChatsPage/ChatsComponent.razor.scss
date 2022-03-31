@@ -1,6 +1,12 @@
 ﻿@import "../../Shared/Styles/Mixins.scss";
 
 .chats {
+    @include flex(unset, unset, column);
+
+    ::deep &__loader {
+        align-self: center;
+    }
+
     &__small-list-box {
         width: 100%;
         overflow: auto;

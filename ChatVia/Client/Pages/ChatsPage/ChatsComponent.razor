@@ -16,9 +16,9 @@
     </ChildContentHeader>
 
     <ChildContent>
-        @if(response.Data is not null)
-        {
-            <div class="chats">
+        <div class="chats">
+            @if(response.Data is not null)
+            {
                 <div class="chats__small-list-box">
                     <ul class="chats__small-list">
                         @foreach(var item in items)
@@ -43,8 +43,12 @@
                         }
                     </ul>
                 </div>
-            </div>
-        }
+            }
+            else
+            {
+                <MudProgressCircular Color="Color.Primary" Size="Size.Small" Indeterminate="true" Class="chats__loader"/>
+            }
+        </div>
     </ChildContent>
 </SidePanelComponent>
 

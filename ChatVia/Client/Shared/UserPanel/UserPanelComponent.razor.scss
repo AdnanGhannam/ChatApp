@@ -65,5 +65,6 @@ $padding: 1.5em;
 }
 
 .bottom {
+    @include flex(unset, unset, column);
     padding: 0 $padding;
 }

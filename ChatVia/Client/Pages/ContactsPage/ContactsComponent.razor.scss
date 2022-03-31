@@ -1,3 +1,10 @@
-﻿.list-of-lists {
+﻿@import "../../Shared/Styles/Mixins.scss";
+
+.list-of-lists {
+    @include flex(unset, unset, column);
     padding-left: 1.5em;
+
+    ::deep &__loader {
+        align-self: center;
+    }
 }

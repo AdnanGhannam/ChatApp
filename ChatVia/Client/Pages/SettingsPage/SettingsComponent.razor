@@ -4,39 +4,52 @@
 
 <PageTitle>Settings</PageTitle>
 
-<UserPanelComponent Title="My Profile" Username="Adnan Ghannam" IsOnline InEditMode
-                    ImageUrl="https://www.diethelmtravel.com/wp-content/uploads/2016/04/bill-gates-wealthiest-person-279x300.jpg"
-                    Bio="If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual.">
-    <HeaderButton>
-        <MudIconButton Icon="@Icons.Filled.Edit"/>
-    </HeaderButton>
-    <ChildContent>
-        <MudExpansionPanels DisableBorders="true" Elevation="0">
-            <MudExpansionPanel Class="mt-2">
-                <TitleContent>
-                    <div class="d-flex">
-                        <MudIcon Icon="@Icons.Filled.Person" class="mr-3"></MudIcon>
-                        <MudText>About</MudText>
-                    </div>
-                </TitleContent>
-                <ChildContent>
-                    <ul>
-                        <UserInfoItemComponent Title="Name">
-                            Adnan Ghannam
-                        </UserInfoItemComponent>
-                        <UserInfoItemComponent Title="Name">
-                            Adnan Ghannam
-                        </UserInfoItemComponent>
-                        <UserInfoItemComponent Title="Name">
-                            Adnan Ghannam
-                        </UserInfoItemComponent>
-                    </ul>
-                </ChildContent>
-            </MudExpansionPanel>
-        </MudExpansionPanels>
-    </ChildContent>
-</UserPanelComponent>
-
+@* 
+    TODO 
+    Recive data and check if the response's data is not null 
+*@
+if(true)
+{
+    <UserPanelComponent Title="My Profile" Username="Adnan Ghannam" IsOnline="true" InEditMode
+                        ImageUrl="https://www.diethelmtravel.com/wp-content/uploads/2016/04/bill-gates-wealthiest-person-279x300.jpg"
+                        Bio="If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual.">
+        <HeaderButton>
+            <MudIconButton Icon="@Icons.Filled.Edit"/>
+        </HeaderButton>
+        <ChildContent>
+            <MudExpansionPanels DisableBorders="true" Elevation="0">
+                <MudExpansionPanel Class="mt-2">
+                    <TitleContent>
+                        <div class="d-flex">
+                            <MudIcon Icon="@Icons.Filled.Person" class="mr-3"></MudIcon>
+                            <MudText>About</MudText>
+                        </div>
+                    </TitleContent>
+                    <ChildContent>
+                        <ul>
+                            <UserInfoItemComponent Title="Name">
+                                Adnan Ghannam
+                            </UserInfoItemComponent>
+                            <UserInfoItemComponent Title="Name">
+                                Adnan Ghannam
+                            </UserInfoItemComponent>
+                            <UserInfoItemComponent Title="Name">
+                                Adnan Ghannam
+                            </UserInfoItemComponent>
+                        </ul>
+                    </ChildContent>
+                </MudExpansionPanel>
+            </MudExpansionPanels>
+        </ChildContent>
+    </UserPanelComponent>
+}
+else
+{
+    <UserPanelComponent Title="My Profile" IsOnline="null">
+        <MudProgressCircular Color="Color.Primary" Size="Size.Small" 
+                            Indeterminate="true" Style="align-self: center;"/>
+    </UserPanelComponent>
+}
 @code {
 
 }
