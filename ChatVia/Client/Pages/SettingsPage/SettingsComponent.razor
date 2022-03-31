@@ -8,13 +8,13 @@
     TODO 
     Recive data and check if the response's data is not null 
 *@
-if(true)
+@if(true)
 {
     <UserPanelComponent Title="My Profile" Username="Adnan Ghannam" IsOnline="true" InEditMode
                         ImageUrl="https://www.diethelmtravel.com/wp-content/uploads/2016/04/bill-gates-wealthiest-person-279x300.jpg"
                         Bio="If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual.">
         <HeaderButton>
-            <MudIconButton Icon="@Icons.Filled.Edit"/>
+            <MudIconButton Icon="@Icons.Filled.Edit" Link="/edit" Target="_blank"/>
         </HeaderButton>
         <ChildContent>
             <MudExpansionPanels DisableBorders="true" Elevation="0">

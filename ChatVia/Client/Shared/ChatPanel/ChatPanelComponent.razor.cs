@@ -110,7 +110,7 @@ public partial class ChatPanelComponent
         {
             if(response.Data is not null && message.ChatId == response.Data.Id)
             {
-                response.Data?.Messages.Add(message);
+                response.Data.Messages.Add(message);
                 StateHasChanged();
             }
         });

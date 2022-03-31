@@ -42,12 +42,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2V0dGluZ3NQYWdlXFNldHRpbmdzQ29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Shared/EmptyLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEVtcHR5TGF5b3V0LnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Shared/Logo/LogoComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ29cTG9nb0NvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asus/source/repos/ChatVia/ChatVia/Client/Shared/NotFoundLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5vdEZvdW5kTGF5b3V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/asus/source/repos/ChatVia/ChatVia/Client/_Imports.razor]
