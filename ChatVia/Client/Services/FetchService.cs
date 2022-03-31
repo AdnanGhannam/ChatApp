@@ -54,7 +54,7 @@ namespace ChatVia.Client.Services
             }
             catch (Exception exp)
             {
-                Console.WriteLine(exp.Message);
+                Console.WriteLine("IFetchSerivce: " + exp.Message);
             }
         }
 
@@ -114,61 +114,8 @@ namespace ChatVia.Client.Services
             }
             catch (Exception exp)
             {
-                Console.WriteLine(exp.Message);
-            }
-        }
-        public async Task DeleteAsync<T>(string url, 
-            Dictionary<string, string>? headers = null,
-            object? body = null, 
-            string? customClient = null, 
-            bool includeCredentials = true, 
-            Action<T>? callback = null)
-        {
-
-            var httpContent = new StringContent(
-                System.Text.Json.JsonSerializer.Serialize(body),
-                System.Text.Encoding.UTF8,
-                "application/json");
-
-            var httpRequestMessage = new HttpRequestMessage(HttpMethod.Post, url)
-            {
-                Content = httpContent,
-            };
-
-            // Adding the headers
-            foreach(var header in headers)
-            {
-                httpRequestMessage.Headers.Add(header.Key, header.Value);
-            }
-
-            if(includeCredentials)
-            { 
-                httpRequestMessage.SetBrowserRequestCredentials(BrowserRequestCredentials.Include);
-            }
-
-            var client = _httpClient.CreateClient(customClient ?? "chatvia-api");
-
-            var httpResponseMessage = await client.SendAsync(httpRequestMessage);
-
-            // var content = await httpResponseMessage.Content.ReadAsStringAsync();
-            // Console.WriteLine(content);
-            // var response = JsonConvert.DeserializeObject<T>(content);
-
-            using var contentStream = await httpResponseMessage.Content.ReadAsStreamAsync();
-
-            var options = new JsonSerializerOptions() 
-                { PropertyNameCaseInsensitive = true, MaxDepth = int.MaxValue,  };
-            var response = 
-                await JsonSerializer.DeserializeAsync<T>(contentStream, options);
-
-            if (response is not null)
-            {
-                callback?.Invoke(response);
+                Console.WriteLine("IFetchSerivce: " + exp.Message);
             }
         }
     }
 }
-
-//            var options = new JsonSerializerOptions() 
-//                { PropertyNameCaseInsensitive = true, MaxDepth = int.MaxValue  };
-//            var response2 = System.Text.Json.JsonSerializer.Deserialize<T>(content, options);

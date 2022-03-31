@@ -2,6 +2,11 @@
 @using ChatVia.Client.Services
 @using ChatVia.Client.Shared.Logo;
 @using ChatVia.Client.Shared.NavbarButton;
+@using Blazored.LocalStorage;
+@using Blazored.SessionStorage;
+@using ChatVia.Shared.Helpers
+@inject ILocalStorageService _localStorage
+@inject ISessionStorageService _sessionStorage
 @inject NavigationManager _navigationManager
 @inject IFetchService _fetch
 
@@ -27,12 +32,17 @@
             <NavbarButtonComponent Icon="@Icons.Filled.Nightlight" Text="Night mod"/>
             <MudMenu AnchorOrigin="Origin.TopRight" TransformOrigin="Origin.BottomLeft">
                 <ActivatorContent>
-                    <MudAvatar Class="mt-2" Image="https://www.diethelmtravel.com/wp-content/uploads/2016/04/bill-gates-wealthiest-person-279x300.jpg" />
+                    <MudAvatar Variant="Variant.Outlined" >
+                        @if(!string.IsNullOrEmpty(username))
+                        {
+                            @username[1]
+                        }
+                    </MudAvatar>
                 </ActivatorContent>
                 <ChildContent>
                     <MudMenuItem>Profile</MudMenuItem>
                     <MudMenuItem>Settings</MudMenuItem>
-                    <MudMenuItem OnClick="(async () => await LogoutButtonClicked())">Logout</MudMenuItem>
+                    <MudMenuItem OnClick="LogoutButtonClicked">Logout</MudMenuItem>
                 </ChildContent>
             </MudMenu>
         </ul>
@@ -40,10 +50,23 @@
 </nav>
 
 @code {
+    string? username = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        username = await _localStorage.GetItemAsStringAsync("username") ??
+                    await _sessionStorage.GetItemAsStringAsync("username");
+
+        await base.OnInitializedAsync();
+    }
+
     async Task LogoutButtonClicked()
     {
-        await _fetch.PostAsync<object>("api/users/logout",
+        await _sessionStorage.RemoveItemAsync("username");
+        await _localStorage.RemoveItemAsync("username");
+
+        await _fetch.PostAsync<string>("api/users/logout",
             includeCredentials: true,
-            callback: _ => _navigationManager.NavigateTo("/login"));
+            callback: r => _navigationManager.NavigateTo("/login"));
     }
 }

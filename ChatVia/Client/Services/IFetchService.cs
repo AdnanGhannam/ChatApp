@@ -14,12 +14,5 @@
             string? customClient = null,
             bool includeCredentials = true,
             Action<T>? callback = null);
-
-        Task DeleteAsync<T>(string url,
-            Dictionary<string, string>? headers = null,
-            object? body = null,
-            string? customClient = null,
-            bool includeCredentials = true,
-            Action<T>? callback = null);
     }
 }

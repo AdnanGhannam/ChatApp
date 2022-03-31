@@ -58,7 +58,6 @@
 
     protected override void OnAfterRender(bool firstRender)
     {
-        Console.WriteLine("main-app: " + App.IsLoggedIn);
         if(!App.IsLoggedIn)
         {
             _navigationManager.NavigateTo("/login");

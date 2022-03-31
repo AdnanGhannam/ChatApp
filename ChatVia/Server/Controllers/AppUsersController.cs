@@ -42,11 +42,7 @@ public class AppUsersController : ControllerBase
     [Authorize]
     [HttpPost(AppUserRoutes.LogoutRoute)]
     public async Task<IActionResult> Logout()
-    {
-        await _mediator.Send(new AppUserLogoutCommand());
-
-        return Ok();
-    }
+        => Ok(await _mediator.Send(new AppUserLogoutCommand()));
 
     [HttpPost(AppUserRoutes.RegisterRoute)]
     public async Task<IActionResult> Register([FromBody] AppUserRegisterDto user)

@@ -39,7 +39,5 @@
         IsLoggedIn = 
             (await _localStorage.GetItemAsync<string>("username") ?? 
             await _sessionStorage.GetItemAsync<string>("username")) == null ? false : true;
-
-        Console.WriteLine("IsLoggedIn: " + IsLoggedIn);
     }
 }
