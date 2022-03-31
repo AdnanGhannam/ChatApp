@@ -40,18 +40,27 @@ public partial class ChatPanelComponent
         }
     }
 
+    private bool sending;
     private ResponseModel<ChatDto> response = new();
 
     protected override async Task OnParametersSetAsync()
     {
         if(MainLayout?.CurrentUserId is not null)
         {
+            response.Data = null;
+            sending = true;
             await _fetch.GetAsync<ResponseModel<ChatDto>>(
                 $"api/chats?chatId={ MainLayout.CurrentUserId }",
                 includeCredentials: true,
                 callback: r => { 
                     response = r; 
-                    Join(response.Data?.Id);
+
+                    if(r.Data is not null)
+                    {
+                        Join(r.Data.Id).Wait();
+                    }
+
+                    sending = false;
                     StateHasChanged();
                 });
         }

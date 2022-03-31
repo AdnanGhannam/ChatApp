@@ -4,9 +4,13 @@ $padding: 1.5em;
 $border: 1px solid var(--clr-primary-300);
 
 .chat-panel {
-    @include flex(stretch, stretch, column);
+    @include flex(center, stretch, column);
     height: 100%;
     flex: 1;
+
+    ::deep &__loader {
+        align-self: center;
+    }
 
     > * {
         padding: $padding;
