@@ -75,10 +75,13 @@ namespace ChatVia.Client.Services
                 Content = httpContent,
             };
 
-            // Adding the headers
-            foreach(var header in headers)
+            if(headers is not null)
             {
-                httpRequestMessage.Headers.Add(header.Key, header.Value);
+                // Adding the headers
+                foreach(var header in headers)
+                {
+                    httpRequestMessage.Headers.Add(header.Key, header.Value);
+                }
             }
 
             if(includeCredentials)
