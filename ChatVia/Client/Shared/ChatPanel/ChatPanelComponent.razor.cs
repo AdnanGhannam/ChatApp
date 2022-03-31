@@ -108,8 +108,11 @@ public partial class ChatPanelComponent
 
         hubConnection.On<AppUserByIdDto, MessageDto>("ReceiveMessage", (user, message) =>
         {
-            response.Data?.Messages.Add(message);
-            StateHasChanged();
+            if(response.Data is not null && message.ChatId == response.Data.Id)
+            {
+                response.Data?.Messages.Add(message);
+                StateHasChanged();
+            }
         });
 
         await hubConnection.StartAsync();
@@ -119,7 +122,6 @@ public partial class ChatPanelComponent
     {
         if (hubConnection is not null && response.Data is not null)
         {
-
             var username = (await localStorage.GetItemAsync<string>("username") ?? 
                 await sessionStorage.GetItemAsync<string>("username"));
 
