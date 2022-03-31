@@ -23,9 +23,9 @@
                     <ul class="chats__small-list">
                         @foreach(var item in items)
                         {
-                            <UserItemComponent FirstName="@item.FirstName" IsSmall
-                                                Color="Color.Success" 
-                                                OnClick="@(() => OnItemClick(@item.Id))" ImageUrl="@("/images/avatar-" + item.Id + ".jpg")"/>
+                            <UserItemComponent Name="@item.FirstName" IsSmall 
+                                                Color="Color.Success" ImageUrl="@("/images/avatar-" + item.Id + ".jpg")"
+                                                OnClick="@(() => OnItemClick(@item.Id))" />
                         }
                     </ul>
                 </div>
@@ -36,9 +36,9 @@
                     <ul class="chats__big-list">
                         @foreach(var item in response.Data)
                         {
-                            <UserItemComponent FirstName="@item.Member.UserName" LastName="" LastMessage="@item.Message?.Content" 
+                            <UserItemComponent Name="@item.Member.UserName" LastMessage="@item.Message?.Content" 
                                                 NumberOfMessages="20" Time="@item.Message?.CreationTime.ToShortTimeString()" 
-                                                Color="@(true ? Color.Success : null)" IsActive="@item.IsActive" 
+                                                Color="@(true ? Color.Success : null)" IsActive="@item.IsActive" SearchTerm="@searchTerm"
                                                 OnClick="@(() => OnItemClick(@item.Id))" ImageUrl="@("/images/avatar-1.jpg")"/>
                         }
                     </ul>

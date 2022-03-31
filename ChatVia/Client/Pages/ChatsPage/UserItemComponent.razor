@@ -3,7 +3,7 @@
     {
         <MudBadge Color="@(Color ?? MudBlazor.Color.Success)" Origin="Origin.BottomRight" Class="user-item__top"
                     Bordered Overlap Dot >
-            <MudAvatar Image="@ImageUrl" Class="user-img" Alt="@FirstName[0].ToString()" />
+            <MudAvatar Image="@ImageUrl" Class="user-img" Alt="@Name[0].ToString()" />
         </MudBadge>
     }
     else
@@ -12,8 +12,8 @@
     }
     <div class="user-item__center">
         <h6 class="full-name">
-            <span class="first-name">@FirstName</span>
-            <span class="last-name">@LastName</span>
+            <MudHighlighter Text="@Name" HighlightedText="@SearchTerm" 
+                       UntilNextBoundary="true" Class="pa-1 mud-elevation-2 mud-theme-primary"/>
         </h6>
         <p class="message">@LastMessage</p>
     </div>
@@ -34,10 +34,7 @@
     public bool IsActive { get; set; } = false;
 
     [Parameter]
-    public string FirstName { get; set; }
-
-    [Parameter]
-    public string LastName { get; set; }
+    public string Name { get; set; }
 
     [Parameter]
     public string LastMessage { get; set; }
@@ -56,4 +53,7 @@
 
     [Parameter]
     public EventCallback OnClick { get; set; }
+
+    [Parameter]
+    public string SearchTerm { get; set; }
 }

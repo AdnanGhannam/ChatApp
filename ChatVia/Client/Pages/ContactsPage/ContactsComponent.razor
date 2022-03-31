@@ -33,7 +33,7 @@
                     }
                     @if(buffer.Count() != 0)
                     {
-                        <ContactsListComponent Character="letter" Names="@buffer.ToList()" SearchTerm="searchTerm"/>
+                        <ContactsListComponent Character="letter" Names="@buffer.ToList()" SearchTerm="@searchTerm"/>
                     }
                 }
             </div>
