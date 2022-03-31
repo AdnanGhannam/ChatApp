@@ -43,6 +43,7 @@ namespace ChatVia.Server.Features.Handlers
                         else
                         {
                             dto.Id = c.Id;
+                            dto.CreationTime = c.CreationTime;
                         }
 
                         dto.Member = _mapper.Map<AppUserByIdDto>(

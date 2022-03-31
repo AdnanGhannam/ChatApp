@@ -12,6 +12,7 @@ namespace ChatVia.Shared.ResponseDtos
         public string Id { get; set; }
         public AppUserByIdDto Member { get; set; }
         public MessageDto Message { get; set; }
+        public DateTime CreationTime { get; set; }
         public bool IsActive { get; set; }
     }
 }

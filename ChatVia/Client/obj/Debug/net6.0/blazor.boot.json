@@ -221,16 +221,16 @@
       "netstandard.dll": "sha256-+9Yr\/gSP3tCZAMbOdAcGhHGuMcyg\/AaxVKtt3tGsvao=",
       "System.Private.CoreLib.dll": "sha256-SnxOe5QK250duVAQOw0iWr1sODhUuVEUykExQyQ\/WSk=",
       "ChatVia.Domain.dll": "sha256-Vh22AInpmI0kFzWefiSaeWHE+r7LpNpjqtYARwT4jA4=",
-      "ChatVia.Shared.dll": "sha256-Mlbiqc\/sJfRDpO4Taue8EjMOet0dsqJhP076GO1hG6g=",
-      "ChatVia.Client.dll": "sha256-vX8VZWLTJ3GI0F+tde6g73dqJ3UVTrO4U0z4DACkMRM="
+      "ChatVia.Shared.dll": "sha256-qhF8nbspZUpD66H16Epm1ntuLRcf8nD3JAEZFsmNdW8=",
+      "ChatVia.Client.dll": "sha256-cy53HqePX9qZf14D6pvtC62+HTSQ4EvgI\/k1QUZ0vNs="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "ChatVia.Shared.pdb": "sha256-TNFcMRZ7jUiC2zS+ggKHuIICS\/TC0cB5fGyJkpqEOx4=",
+      "ChatVia.Shared.pdb": "sha256-+iF85DwfYt4cnUg+PWVXP+rGZ+wammmPDIybc72PyQ8=",
       "ChatVia.Domain.pdb": "sha256-FK2YJ5muJcHxgYOKwp42hnAgNi8bhWrgtMHVmrB2VqU=",
-      "ChatVia.Client.pdb": "sha256-tojvMaWu7UpSRggI8BRVTvlk4uw2p6myWLCxorbkzjg="
+      "ChatVia.Client.pdb": "sha256-7AtjU3bFet5rGE\/yXmJLnV1iUKPDJGE4O0socX6PW50="
     },
     "runtime": {
       "dotnet.6.0.2.ai6sgpiras.js": "sha256-wbTVn69TU0+WI83iB+kky8tf\/BjZdYJeM0rUP96ur\/c=",

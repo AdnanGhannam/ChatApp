@@ -44,13 +44,12 @@
                 }
             </div>
 
-            <form class="chat-panel__bottom" >
+            <form class="chat-panel__bottom" @onsubmit="Send" @onsubmit:preventDefault="true">
                 <MudTextField @bind-Value="@MessageValue" Immediate="true" Variant="Variant.Outlined" 
                               Placeholder="Enter a message..." class="custom-input chat-panel__bottom__input" />
 
                 <MudIconButton Icon="@Icons.Filled.Send" Variant="Variant.Filled" 
-                                Color="Color.Primary" OnClick="Send"
-                                ButtonType="ButtonType.Button"/>
+                                Color="Color.Primary" ButtonType="ButtonType.Button"/>
             </form>
     }
     else if(sending)

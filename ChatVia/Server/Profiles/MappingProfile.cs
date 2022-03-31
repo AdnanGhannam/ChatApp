@@ -11,7 +11,9 @@ namespace ChatVia.Server.Profiles
             CreateMap<AppUser, AppUserByIdDto>();
             CreateMap<AppUser, AppUserListDto>();
             CreateMap<Chat, ChatListDto>()
-                .ForMember(e => e.Message, config => config.MapFrom(src => src.Messages.First()))
+                .ForMember(
+                    e => e.Message, 
+                    config => config.MapFrom(src => src.Messages.OrderByDescending(m => m.CreationTime).First()))
                 .ForMember(e => e.Member, config => config.Ignore())
                 .ForMember(e => e.IsActive, config => config.Ignore());
             CreateMap<Chat, ChatDto>()

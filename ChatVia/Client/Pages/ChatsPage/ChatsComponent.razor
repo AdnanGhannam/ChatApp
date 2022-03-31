@@ -36,10 +36,11 @@
                     <ul class="chats__big-list">
                         @foreach(var item in response.Data)
                         {
-                            <UserItemComponent Name="@item.Member.UserName" LastMessage="@item.Message?.Content" 
-                                                NumberOfMessages="20" Time="@item.Message?.CreationTime.ToShortTimeString()" 
+                            <UserItemComponent Name="@item.Member.UserName" 
+                                                NumberOfMessages="20" LastMessage="@item.Message?.Content" 
+                                                Time="@(item.Message is not null ? item.Message.CreationTime.ToShortTimeString() : item.CreationTime.ToShortTimeString())" 
                                                 Color="@(true ? Color.Success : null)" IsActive="@item.IsActive" SearchTerm="@searchTerm"
-                                                OnClick="@(() => OnItemClick(@item.Id))" ImageUrl="@("/images/avatar-1.jpg")"/>
+                                                OnClick="@(() => OnItemClick(@item.Id))" ImageUrl="@(item.Member.ProfilePhoto)"/>
                         }
                     </ul>
                 </div>
@@ -87,7 +88,9 @@
         await _fetch.GetAsync<ResponseModel<List<ChatListDto>>>(
             "api/chats/user",
             includeCredentials: true,
-            callback: r => response = r);
+            callback: r => {
+                response = r;
+            });
     }
 
     //
